@@ -2,6 +2,8 @@
 
 Tick the matching boxes in [../progress.md](../progress.md). Do not skip Domain 1.
 
+> **Sequencing lives in [roadmap.md](roadmap.md)** — it interleaves these steps with the Academy course C sections. This file remains the canonical numbering for `progress.md`.
+
 All five domains are full teaching tracks. **Do not wait** — start Domain 1 now (highest exam weight).
 
 ---

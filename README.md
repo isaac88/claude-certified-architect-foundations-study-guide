@@ -31,7 +31,9 @@ If Domain 1 is weak, you do not pass. Start there.
 
 ## How to use this repo
 
-Follow **[docs/study-steps.md](docs/study-steps.md)** in order. Tick boxes in [progress.md](progress.md).
+**Start here: [docs/roadmap.md](docs/roadmap.md)** — the execution order, pairing each Anthropic Academy course section with the domain files it feeds.
+
+[docs/study-steps.md](docs/study-steps.md) holds the numbered 1–30 plan that [progress.md](progress.md) ticks; the roadmap says what to do on which day.
 
 
 All five domains are full teaching tracks.

@@ -1,6 +1,6 @@
 # Progress tracker
 
-Follow **[docs/study-steps.md](docs/study-steps.md)** in order. Tick here as you complete each step.
+Follow **[docs/roadmap.md](docs/roadmap.md)** for what to do next; it maps onto the numbered steps in **[docs/study-steps.md](docs/study-steps.md)**. Tick here as you complete each step.
 
 ## Phase 0 — Orientation
 
@@ -27,7 +27,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 ## Phase 1 — Domain 1 (27%)
 
-- [ ] 6. 1.1 Agentic loops + premature-stop answers
+- [x] 6. 1.1 Agentic loops + premature-stop answers — 31 Aug 2026
 - [ ] 7. 1.2 Multi-agent orchestration
 - [ ] 8. 1.3 Subagent invocation
 - [ ] 9. 1.4 Workflow enforcement
