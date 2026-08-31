@@ -224,7 +224,9 @@ print("SUMMARY — three ways to get clean JSON, in order of strength")
 print("=" * 70)
 print("  1. Ask nicely in the prompt        a REQUEST. Model may still wrap it.")
 print("  2. Prefill + stop_sequence         a HACK. Worked; prefill now 400s.")
-print("  3. output_config.format schema     a GUARANTEE. Use this.")
+print("  3. output_config.format schema     a GUARANTEE of SHAPE. Use this.")
+print("  4. schema + validation in code      a guarantee of everything else")
+print("     (schemas cannot express counts — see exercise 09)")
 print()
 print("Domain 4's habit in one line: prefer the guarantee to the request.")
 
@@ -248,8 +250,11 @@ print("Domain 4's habit in one line: prefer the guarantee to the request.")
 # 2. The replacement is structured outputs:
 #      output_config={"format": {"type": "json_schema", "schema": {...}}}
 #    Returns bare JSON — no fence, no preamble, nothing to strip. Shape is
-#    enforced rather than requested, which is strictly better than the hack it
-#    replaces.
+#    enforced rather than requested.
+#    CAVEAT (found in exercise 09): schemas enforce shape, NOT cardinality.
+#    Strict schemas reject maxItems outright and reject minItems above 1, so
+#    "exactly three items" cannot be a schema constraint. Push shape into the
+#    schema, then verify counts in code.
 # 3. Strict schemas require "additionalProperties": False on EVERY object in
 #    the schema, nested ones included, or:
 #      400 output_config.format.schema: For 'object' type,
