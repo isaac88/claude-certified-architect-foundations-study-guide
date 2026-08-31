@@ -1,0 +1,8 @@
+# Tooling for this study repo.
+#
+# NOTE: mise's registry shortname `ant` is Apache Ant, NOT the Anthropic CLI.
+# The Anthropic CLI comes from its GitHub releases, with the binary aliased
+# to `ant`. Docs: https://platform.claude.com/docs/en/cli-sdks-libraries/cli/quickstart
+[tools]
+python = "3.12"
+"github:anthropics/anthropic-cli" = { version = "latest", exe = "ant" }

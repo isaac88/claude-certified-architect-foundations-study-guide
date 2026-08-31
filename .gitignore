@@ -1,0 +1,35 @@
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Local notes and secrets — never commit these
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# Editor
+.idea/
+.vscode/
+*.code-workspace
+
+# Python / node if you later add exercises
+__pycache__/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+
+# Private working files — local only, never published
+HANDOFF.md
+
+# Personal score dumps
+progress/private/
+*.local.md
+
+# Official / third-party PDFs — keep local, do not publish
+*.pdf
