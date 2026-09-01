@@ -29,7 +29,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 - [x] 6. 1.1 Agentic loops + premature-stop answers — 31 Aug 2026
 - [x] 7. 1.2 Multi-agent orchestration — 1 Sep 2026
-- [ ] 8. 1.3 Subagent invocation
+- [x] 8. 1.3 Subagent invocation — 1 Sep 2026
 - [ ] 9. 1.4 Workflow enforcement
 - [ ] 10. 1.5 SDK hooks
 - [ ] 11. 1.6 Task decomposition
