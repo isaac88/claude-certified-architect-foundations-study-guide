@@ -1,0 +1,640 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.3 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a lightweight athlete (rock climber) with multiple dietary restrictions (vegetarian + nut allergy) to ensure the meal plan is both nutritionally adequate and safely accommodates constraints</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 58<br><strong>goal:</strong> High-performance rock climbing with sustained energy and strength<br><strong>restrictions:</strong> Vegetarian, nut allergy</td>
+                <td class="criteria">• Meal plan includes 4+ meals/snacks across the day with adequate protein (minimum 1.2g per kg body weight) from non-nut vegetarian sources<br>• All meals are nut-free and vegetarian with no cross-contamination risks<br>• Plan is compact and concise (fits on single page or brief format)</td>
+                <td class="output"><pre># Rock Climbing Nutrition Plan
+## Athlete Profile: 168cm, 58kg, Vegetarian, Nut Allergy
+
+---
+
+## Daily Calorie & Macro Target
+- **Daily Calories:** 2,400-2,600 kcal
+- **Protein:** 100-110g (17%)
+- **Carbohydrates:** 310-330g (52%)
+- **Fat:** 65-75g (25-27%)
+
+*Rationale: High carbs for sustained climbing energy; adequate protein for muscle recovery; moderate fat for hormone health*
+
+---
+
+## Daily Meal Plan
+
+### BREAKFAST (7:00 AM) — 550 kcal
+**Oatmeal Power Bowl**
+- Rolled oats: 60g
+- Banana: 120g
+- Greek yogurt (plain, non-fat): 150g
+- Sunflower seed butter: 20g
+- Honey: 15g
+- Cinnamon: 2g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 18g |
+| Carbs | 72g |
+| Fat | 10g |
+
+---
+
+### MID-MORNING SNACK (10:00 AM) — 280 kcal
+**Smoothie**
+- Plain plant-based milk (soy/oat): 250ml
+- Whey or pea protein powder: 30g
+- Blueberries (frozen): 80g
+- Banana: 80g
+- Flax seeds: 10g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 26g |
+| Carbs | 32g |
+| Fat | 6g |
+
+---
+
+### LUNCH (12:30 PM) — 650 kcal
+**Lentil & Quinoa Bowl**
+- Cooked quinoa: 100g
+- Cooked red lentils: 150g
+- Roasted chickpeas: 50g
+- Roasted sweet potato: 150g
+- Spinach (raw): 50g
+- Olive oil (dressing): 10ml
+- Lemon juice & garlic: to taste
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 22g |
+| Carbs | 78g |
+| Fat | 12g |
+
+---
+
+### PRE-CLIMB SNACK (2.5 hours before climbing) — 320 kcal
+**Energy & Recovery Combo**
+- Whole grain bread: 80g (2 slices)
+- Hummus: 40g
+- Cucumber: 100g
+- Banana: 100g
+- Dried apricots: 40g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 12g |
+| Carbs | 56g |
+| Fat | 6g |
+
+---
+
+### DINNER (7:00 PM) — 650 kcal
+**Vegetarian Stir-Fry**
+- Firm tofu (cubed, pressed): 200g
+- Brown rice: 80g (cooked)
+- Broccoli: 120g
+- Carrots: 80g
+- Bell pepper: 100g
+- Sesame oil: 10ml
+- Low-sodium soy sauce: 10ml
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 22g |
+| Carbs | 70g |
+| Fat | 18g |
+
+---
+
+### POST-CLIMB RECOVERY (if climbing in evening) — 250 kcal
+*Skip if consuming dinner within 1 hour of climbing*
+- Greek yogurt: 150g
+- Granola (nut-free): 30g
+- Honey: 10g
+- Berries: 60g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 15g |
+| Carbs | 32g |
+| Fat | 3g |
+
+---
+
+## Daily Totals
+| Nutrient | Amount |
+|----------|--------|
+| **Calories** | 2,700 |
+| **Protein** | 115g |
+| **Carbohydrates** | 340g |
+| **Fat** | 65g |
+
+---
+
+## Key Nutrition Tips for Climbing
+
+✓ **Hydration:** 3-4 liters water daily; add electrolytes during intense sessions
+✓ **Timing:** Eat main meals 3-4 hours before climbing; snacks 1-2 hours before
+✓ **Recovery:** Carb + protein within 30-60 minutes post-climb
+✓ **Iron:** Include lentils, tofu, pumpkin seeds (vegetarian protein + iron source)
+✓ **Calcium:** Greek yogurt, fortified plant milk, leafy greens
+
+---
+
+## Budget-Friendly Staples
+- Dried lentils & chickpeas
+- Oats & brown rice
+- Frozen vegetables
+- Seasonal fruit (bananas, apples)
+- Tofu & plant-based yogurt
+- Seeds (sunflower, flax, pumpkin)</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all three mandatory requirements: it includes 6 meals/snacks with timing across the day, provides complete daily caloric total and macronutrient breakdown, and lists exact foods with portions. All protein sources are vegetarian and nut-free with no cross-contamination risks. However, the presentation is more comprehensive than 'compact and concise' - it reads as an extended nutritional guide rather than a brief one-day plan. The optional post-climb meal creates minor ambiguity about intended daily totals. Despite these secondary presentation issues, the solution delivers a well-researched, practical, and nutritionally sound meal plan that meets all core requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an endurance athlete (marathon runner) with high caloric needs, average build, and no dietary restrictions to verify the plan prioritizes carbohydrates and sustained energy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 70 kg<br><strong>goal:</strong> Marathon training with sustained energy and carbohydrate loading<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Plan prioritizes carbohydrates (55-65% of calories) to support endurance training<br>• Total daily calories align with high athletic demands (approximately 3000-3500 kcal)<br>• Includes 4-5 meals/snacks with sustained-release energy sources (whole grains, legumes, fruits)<br>• Plan is concise and formatted for single day consumption</td>
+                <td class="output"><pre># Marathon Training Nutrition Plan
+## Athlete Profile: 178cm, 70kg, No Dietary Restrictions
+
+---
+
+## Daily Calorie & Macro Target
+- **Daily Calories:** 3,000-3,200 kcal
+- **Protein:** 105-120g (14%)
+- **Carbohydrates:** 450-480g (60%)
+- **Fat:** 80-95g (25-28%)
+
+*Rationale: High carbs for sustained marathon endurance and glycogen loading; adequate protein for muscle recovery; moderate fat for overall health and satiety*
+
+---
+
+## Daily Meal Plan
+
+### BREAKFAST (7:00 AM) — 600 kcal
+**Oatmeal with Fruit & Eggs**
+- Rolled oats: 80g
+- Whole milk: 250ml
+- 2 large eggs (scrambled): 100g
+- Banana: 120g
+- Honey: 15g
+- Cinnamon: 2g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 20g |
+| Carbs | 78g |
+| Fat | 16g |
+
+---
+
+### MID-MORNING SNACK (10:00 AM) — 380 kcal
+**Energy Boost Combo**
+- Whole grain toast: 60g (2 slices)
+- Peanut butter: 25g
+- Apple: 180g
+- Sports drink (6% carbs): 300ml
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 12g |
+| Carbs | 62g |
+| Fat | 10g |
+
+---
+
+### LUNCH (12:30 PM) — 700 kcal
+**Chicken & Rice Bowl**
+- Grilled chicken breast: 180g
+- White rice (cooked): 150g
+- Sweet potato: 120g
+- Mixed vegetables (carrots, broccoli): 100g
+- Olive oil (dressing): 10ml
+- Salt & pepper: to taste
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 35g |
+| Carbs | 85g |
+| Fat | 12g |
+
+---
+
+### PRE-RUN SNACK (2-3 hours before long run) — 320 kcal
+**Quick Carb Load**
+- Bagel (plain): 85g
+- Jam: 20g
+- Banana: 100g
+- Low-fat yogurt: 150g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 12g |
+| Carbs | 68g |
+| Fat | 3g |
+
+---
+
+### DINNER (7:00 PM) — 750 kcal
+**Pasta with Lean Meat**
+- Whole wheat pasta (cooked): 120g
+- Lean ground turkey: 150g
+- Marinara sauce: 150ml
+- Olive oil: 8ml
+- Parmesan cheese: 20g
+- Side salad (mixed greens): 80g
+- Garlic bread: 40g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 32g |
+| Carbs | 92g |
+| Fat | 18g |
+
+---
+
+### POST-RUN RECOVERY (if running in evening) — 450 kcal
+*Consume within 30-60 minutes of finishing run*
+- Chocolate milk: 400ml
+- Protein bar: 65g
+- Granola: 40g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 18g |
+| Carbs | 68g |
+| Fat | 8g |
+
+---
+
+## Daily Totals
+| Nutrient | Amount |
+|----------|--------|
+| **Calories** | 3,200 |
+| **Protein** | 129g |
+| **Carbohydrates** | 453g |
+| **Fat** | 67g |
+
+---
+
+## Key Nutrition Tips for Marathon Training
+
+✓ **Hydration:** 3-4 liters water daily; 500-750ml sports drink per hour during long runs
+✓ **Carb Loading:** 3-4 days before marathon, increase carbs to 70% of calories
+✓ **Timing:** Main meals 3-4 hours before runs; snacks 1-2 hours before
+✓ **Recovery Window:** Carb + protein (3:1 ratio) within 30-60 minutes post-run
+✓ **Long Run Fueling:** For runs over 90 minutes, consume 30-60g carbs/hour (gels, sports drinks, energy bars)
+✓ **Iron & B-Vitamins:** Lean meats, whole grains, leafy greens support oxygen transport
+✓ **Electrolytes:** Salt foods appropriately; consider electrolyte tablets for runs over 2 hours
+
+---
+
+## Carb-Loading Protocol (Race Week)
+- **Days 7-4 before race:** Maintain standard plan
+- **Days 3-1 before race:** Increase carbs to 80-85% of calories; reduce fiber & fat slightly
+- **Race morning:** Light breakfast 3-4 hours before; focus on easily digestible carbs
+
+---
+
+## Budget-Friendly Staples
+- Oats & whole grains (rice, pasta, bread)
+- Eggs & chicken breast
+- Ground turkey or lean beef
+- Bananas & apples (seasonal)
+- Canned tuna & beans
+- Peanut butter
+- Milk & yogurt
+- Frozen vegetables
+- White & sweet potatoes
+- Sports drinks & energy bars (race preparation)</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution thoroughly satisfies all three mandatory requirements: it provides a clear daily caloric total (3,200 kcal), complete macronutrient breakdown with percentages, and six specific meals with exact portions (80g oats, 180g chicken, etc.) and precise timing (7:00 AM breakfast, 12:30 PM lunch, etc.). The carbohydrate strategy at 56.5% sits within the acceptable 55-65% range, though closer to the lower bound due to slightly elevated protein content. All meals feature sustained-release sources appropriate for marathon training. The plan is well-formatted and contains actionable details. The only minor deviation from the secondary criteria is the inclusion of six meals rather than 4-5, though this provides more granular fueling options for serious marathon training and doesn't substantially undermine conciseness. The solution goes slightly beyond the task scope with supplementary guidance, which enhances quality without detracting from core requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a strength-focused athlete (weightlifter) who is overweight and aims for muscle gain while reducing body fat, to assess how the plan balances protein intake with caloric management</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 95 kg<br><strong>goal:</strong> Build muscle while reducing body fat through strength training<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Plan contains 4-6 meals distributed throughout the day with high protein intake (minimum 160g total)<br>• Daily caloric deficit appropriate for fat loss while supporting muscle gain (2200-2400 kcal estimated)<br>• Includes protein-rich sources at each meal and prioritizes whole foods suitable for a weightlifter<br>• Compact format with clear meal times, portions, and macronutrient breakdown</td>
+                <td class="output"><pre># Strength Training & Body Composition Nutrition Plan
+## Athlete Profile: 178cm, 95kg, No Dietary Restrictions
+
+---
+
+## Daily Calorie & Macro Target
+- **Daily Calories:** 2,800-3,000 kcal
+- **Protein:** 190-210g (28%)
+- **Carbohydrates:** 310-340g (42%)
+- **Fat:** 78-85g (26-28%)
+
+*Rationale: High protein for muscle building & satiety; moderate-high carbs for training energy; controlled calories for fat loss while preserving lean mass*
+
+---
+
+## Daily Meal Plan
+
+### BREAKFAST (7:00 AM) — 600 kcal
+**Egg & Oatmeal Breakfast**
+- Whole eggs: 3 large (180g)
+- Rolled oats: 70g
+- Banana: 120g
+- Whole milk: 200ml
+- Honey: 10g
+- Salt & pepper: to taste
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 30g |
+| Carbs | 68g |
+| Fat | 18g |
+
+---
+
+### MID-MORNING SNACK (10:00 AM) — 320 kcal
+**Protein & Carb Snack**
+- Greek yogurt (plain, full-fat): 200g
+- Granola: 40g
+- Blueberries: 80g
+- Honey: 10g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 20g |
+| Carbs | 42g |
+| Fat | 6g |
+
+---
+
+### LUNCH (1:00 PM) — 700 kcal
+**Grilled Chicken & Rice Bowl**
+- Boneless, skinless chicken breast: 250g (grilled)
+- White rice (cooked): 150g
+- Broccoli: 150g
+- Carrots: 80g
+- Olive oil: 10ml
+- Salt & garlic powder: to taste
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 52g |
+| Carbs | 68g |
+| Fat | 14g |
+
+---
+
+### PRE-WORKOUT SNACK (2 hours before training) — 280 kcal
+**Quick Energy**
+- White bread: 80g (2 slices)
+- Lean ground turkey (cooked): 80g
+- Tomato: 60g
+- Low-fat mayo: 15g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 22g |
+| Carbs | 30g |
+| Fat | 8g |
+
+---
+
+### POST-WORKOUT RECOVERY (within 30 min of training) — 350 kcal
+**Fast Carb + Protein**
+- Whey protein powder: 40g
+- Whole milk: 300ml
+- Banana: 100g
+- Dextrose powder (optional): 15g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 35g |
+| Carbs | 48g |
+| Fat | 5g |
+
+---
+
+### DINNER (7:00 PM) — 750 kcal
+**Lean Beef & Sweet Potato**
+- Lean ground beef (93/7): 280g (cooked)
+- Sweet potato: 200g (roasted)
+- Spinach (sautéed): 100g
+- Olive oil: 10ml
+- Onion & garlic: to taste
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 48g |
+| Carbs | 50g |
+| Fat | 20g |
+
+---
+
+### OPTIONAL EVENING SNACK (9:00 PM) — 200 kcal
+*Only if needed before bed*
+- Cottage cheese (low-fat): 200g
+- Berries: 80g
+
+| Macro | Amount |
+|-------|--------|
+| Protein | 28g |
+| Carbs | 12g |
+| Fat | 3g |
+
+---
+
+## Daily Totals (Without Evening Snack)
+| Nutrient | Amount |
+|----------|--------|
+| **Calories** | 2,980 |
+| **Protein** | 207g |
+| **Carbohydrates** | 306g |
+| **Fat** | 74g |
+
+---
+
+## Daily Totals (With Evening Snack)
+| Nutrient | Amount |
+|----------|--------|
+| **Calories** | 3,180 |
+| **Protein** | 235g |
+| **Carbohydrates** | 318g |
+| **Fat** | 77g |
+
+---
+
+## Key Nutrition Tips for Strength Training
+
+✓ **Hydration:** 3.5-4.5 liters water daily; increase during intense sessions
+✓ **Protein Timing:** 30-40g per meal; post-workout within 30-60 minutes is critical
+✓ **Caloric Deficit:** Eat 250-350 kcal below maintenance for steady fat loss (0.5-1 lb/week)
+✓ **Carb Placement:** Prioritize carbs around workouts for energy & recovery
+✓ **Meal Frequency:** 5-6 meals keeps metabolism active & muscle-sparing
+✓ **Creatine:** Consider 5g daily for strength & muscle gains (optional)
+
+---
+
+## Budget-Friendly Staples
+- Eggs (excellent protein & cost-effective)
+- Chicken breast (bulk buying)
+- Ground beef (lean cuts)
+- Oats & rice (white & brown)
+- Sweet potatoes & regular potatoes
+- Frozen vegetables (broccoli, carrots, spinach)
+- Greek yogurt & cottage cheese
+- Bananas & seasonal fruit
+- Whey protein powder (buy in bulk)
+
+---
+
+## Weekly Adjustments
+- **Weight Loss Stalled?** Reduce by 200 kcal (cut carbs slightly or increase cardio)
+- **Strength Declining?** Add 200 kcal back in (increase carbs around workouts)
+- **Monitor Progress:** Weigh weekly; aim for 0.5-1 lb loss while maintaining strength levels</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all three mandatory requirements: it provides daily caloric totals (both with and without optional snack), complete macronutrient breakdowns, and 6 meals with exact portions and timing throughout the day. Protein intake far exceeds the 160g minimum at 207-235g daily. However, the caloric target of 2,800-3,000 kcal is notably higher than the criteria's specified 2,200-2,400 kcal range for fat loss. While this caloric level may be appropriate for a 95kg athlete's maintenance, it deviates from the stated benchmark. Additionally, though the meal plan is well-organized, the inclusion of extensive supplementary advice (budget tips, weekly adjustments, hydration guidelines) slightly dilutes the 'compact and concise' requirement. The core meal plan itself is excellent and meets all primary criteria.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
