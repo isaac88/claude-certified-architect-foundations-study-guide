@@ -1,0 +1,64 @@
+[
+  {
+    "output": "# Nutrition Plan for High-Performance Rock Climbing\n\n## Daily Calorie & Macro Targets\n- **Calories**: ~2,400-2,700/day (depending on training intensity)\n- **Protein**: 100-120g/day (1.7-2.1g per kg) for muscle recovery\n- **Carbs**: 300-360g/day for sustained energy\n- **Fats**: 65-75g/day for hormone health\n\n## Key Food Groups\n\n### Protein Sources (prioritize these)\n- Legumes: lentils, chickpeas, black beans, peas\n- Dairy: Greek yogurt, cottage cheese, eggs, cheese\n- Soy: tofu, tempeh, edamame\n- Whole grains: quinoa, buckwheat\n- Seeds: sunflower, pumpkin, sesame\n\n### Carbohydrates (sustained energy)\n- Oats, brown rice, sweet potatoes, whole grain bread\n- Fruits: bananas, dates, berries, apples\n- Legumes (dual protein + carb benefit)\n\n### Fats (without nuts)\n- Olive oil, avocado, seeds, whole grains\n- Dairy products, eggs\n- Coconut oil\n\n### Micronutrient Focus\n- **Iron**: legumes, leafy greens, fortified cereals\n- **Calcium**: dairy, leafy greens, fortified plant milks\n- **Magnesium**: seeds, whole grains, dark chocolate\n- **Vitamin B12**: fortified plant milks or supplement\n\n## Sample Daily Structure\n- **Breakfast**: Oatmeal + Greek yogurt + berries + seeds\n- **Mid-morning**: Fruit + seed butter\n- **Lunch**: Lentil/chickpea-based grain bowl with veggies\n- **Pre-climb snack**: Banana + seed-based energy bar\n- **Dinner**: Tofu/tempeh stir-fry with brown rice\n- **Evening**: Greek yogurt or cottage cheese\n\nWould you like specific meal ideas or recipes?",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "168",
+        "weight": "58",
+        "goal": "High-performance rock climbing with sustained energy and strength",
+        "restrictions": "Vegetarian, nut allergy"
+      },
+      "solution_criteria": [
+        "Meal plan includes 4+ meals/snacks across the day with adequate protein (minimum 1.2g per kg body weight) from non-nut vegetarian sources",
+        "All meals are nut-free and vegetarian with no cross-contamination risks",
+        "Plan is compact and concise (fits on single page or brief format)"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a lightweight athlete (rock climber) with multiple dietary restrictions (vegetarian + nut allergy) to ensure the meal plan is both nutritionally adequate and safely accommodates constraints"
+    },
+    "score": 2,
+    "reasoning": "The solution provides excellent nutritional guidance and correctly identifies all constraints (vegetarian, nut-free, adequate protein for 58kg athlete). However, it fundamentally fails the mandatory requirements. The task explicitly requires 'Meals with exact foods, portions, and timing' and a 'Daily caloric total' with 'Macronutrient breakdown.' The solution only offers a generic framework and sample structure without: (1) a calculated daily total, (2) specific portion sizes for any meals, (3) actual meal timing with times of day, (4) meal-by-meal macro tracking. While the guidelines section is valuable, it does not constitute a functional meal plan. The solution explicitly asks 'Would you like specific meal ideas?' - admitting it hasn't delivered what was requested."
+  },
+  {
+    "output": "# Nutrition Plan for Body Recomposition\n\n## Daily Calorie & Macro Targets\n\n**Calories:** 2,400-2,600/day (modest deficit while training)\n- Your BMR is ~1,850 cal; this allows muscle building with slight fat loss\n\n**Macronutrients:**\n- **Protein:** 190-210g/day (2.0-2.2g per kg body weight)\n- **Fats:** 65-75g/day (25-30% of calories)\n- **Carbs:** 270-320g/day (remaining calories)\n\n---\n\n## What to Eat\n\n### Protein Sources (at every meal)\n- Chicken breast, turkey, lean ground beef\n- Fish (salmon, cod), eggs, Greek yogurt\n- Cottage cheese, protein powder, legumes\n\n### Carbohydrates (especially around workouts)\n- Oats, brown rice, sweet potatoes, whole grain bread\n- Fruit (bananas, berries), pasta\n- Time higher carbs around training\n\n### Healthy Fats\n- Olive oil, avocado, nuts, seeds\n- Fatty fish, nut butters\n\n### Vegetables\n- Broccoli, spinach, peppers, carrots (minimal impact on calories, high nutrients)\n\n---\n\n## Practical Tips\n\n\u2713 Eat in a **slight calorie deficit** (200-300 cal below maintenance)\n\u2713 **Prioritize protein** at every meal\n\u2713 Lift heavy 3-4x/week to preserve muscle\n\u2713 Be patient\u2014body recomposition is slower than pure bulking/cutting\n\u2713 Track intake for 2 weeks to dial in\n\nWould you like specific meal examples?",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "95 kg",
+        "goal": "Build muscle while reducing body fat through strength training",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Plan contains 4-6 meals distributed throughout the day with high protein intake (minimum 160g total)",
+        "Daily caloric deficit appropriate for fat loss while supporting muscle gain (2200-2400 kcal estimated)",
+        "Includes protein-rich sources at each meal and prioritizes whole foods suitable for a weightlifter",
+        "Compact format with clear meal times, portions, and macronutrient breakdown"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a strength-focused athlete (weightlifter) who is overweight and aims for muscle gain while reducing body fat, to assess how the plan balances protein intake with caloric management"
+    },
+    "score": 2,
+    "reasoning": "The solution violates all three mandatory requirements. While it provides daily caloric totals and macro breakdowns (meeting those aspects), it fundamentally fails to deliver what was explicitly requested: a 1-day meal plan with 4-6 specific meals showing exact foods, portions, and timing. The task explicitly asks for a 'compact, concise 1 day meal plan' and the criteria requires 'meals with exact foods, portions, and macronutrient breakdown.' Instead, the solution provides a template and framework rather than an actual day's worth of meals. The offer 'Would you like specific meal examples?' indicates the solution is incomplete. This is a structural failure to meet the core deliverable."
+  },
+  {
+    "output": "# Marathon Training Nutrition Plan\n\n## Daily Calorie Target\n**2,800-3,200 calories/day** (adjust based on training intensity)\n\n## Macronutrient Distribution\n\n| Nutrient | Amount | Purpose |\n|----------|--------|---------|\n| **Carbohydrates** | 55-65% (385-520g) | Primary fuel for endurance |\n| **Protein** | 15-20% (105-160g) | Muscle repair & recovery |\n| **Fat** | 20-25% (62-89g) | Sustained energy & hormone production |\n\n## Sample Daily Structure\n\n### Breakfast\n- Oatmeal with banana, berries, honey\n- 2 slices whole grain toast with peanut butter\n- Greek yogurt\n\n### Mid-Morning Snack\n- Energy bar or rice cakes with jam\n- Sports drink (if training)\n\n### Lunch\n- Grilled chicken or fish\n- Brown rice or pasta\n- Vegetables (broccoli, sweet potato)\n\n### Pre-Workout (1-3 hours before)\n- Banana + energy drink, or toast with jam\n\n### Post-Workout (within 30-60 min)\n- Chocolate milk, protein smoothie, or bagel with turkey\n\n### Dinner\n- Lean meat/fish\n- Whole grain/rice\n- Vegetables + olive oil\n\n### Evening Snack (if needed)\n- Fruit, whole grain crackers, or low-fat dairy\n\n## Hydration\n- **Daily**: 3-4 liters water\n- **During training**: Sports drinks for efforts >90 minutes\n\n## Carb-Loading (3 days before race)\nIncrease carbs to **70% of calories** while reducing fiber and fat slightly.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "70 kg",
+        "goal": "Marathon training with sustained energy and carbohydrate loading",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Plan prioritizes carbohydrates (55-65% of calories) to support endurance training",
+        "Total daily calories align with high athletic demands (approximately 3000-3500 kcal)",
+        "Includes 4-5 meals/snacks with sustained-release energy sources (whole grains, legumes, fruits)",
+        "Plan is concise and formatted for single day consumption"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with an endurance athlete (marathon runner) with high caloric needs, average build, and no dietary restrictions to verify the plan prioritizes carbohydrates and sustained energy"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all three mandatory requirements: it specifies a daily caloric total, provides detailed macronutrient breakdown percentages with gram amounts, and includes multiple meals with foods and timing context. It aligns well with secondary criteria by prioritizing carbohydrates for endurance, including sustained-release sources (oatmeal, whole grains, brown rice), and presenting information in a compact, single-day format. However, the solution falls short of being fully executable due to missing portion sizes that would allow verification of whether specific meals actually deliver the stated macronutrient targets. The calorie recommendation is also slightly conservative for this athlete profile and training goal. These are notable deficiencies but do not violate the mandatory requirements."
+  }
+]

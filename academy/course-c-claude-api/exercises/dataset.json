@@ -1,14 +1,17 @@
 [
   {
-    "task": "Create a JSON configuration file for an AWS Lambda function that processes S3 events, with environment variables for the target bucket name and log level",
-    "format": "json"
+    "task": "Parse an AWS S3 bucket name from an S3 URI like 's3://my-bucket-name/path/to/object' and extract just the bucket name",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly match and capture bucket names from S3 URIs, handling bucket names with hyphens and numbers, and work for both s3:// and https:// formats"
   },
   {
-    "task": "Write a Python function that takes an AWS S3 bucket name and returns True if the bucket name is valid according to AWS naming rules (3-63 characters, lowercase letters, numbers, and hyphens only, must start and end with letter or number)",
-    "format": "python"
+    "task": "Create a JSON configuration object for an AWS Lambda function that includes function name, runtime (Python 3.11), timeout (60 seconds), memory (512 MB), and environment variables for API_KEY and REGION",
+    "format": "json",
+    "solution_criteria": "The JSON object should have valid structure with all required Lambda configuration fields and environment variables properly nested"
   },
   {
-    "task": "Create a regex pattern that matches valid AWS IAM role ARNs in the format: arn:aws:iam::123456789012:role/RoleName",
-    "format": "regex"
+    "task": "Write a Python function that takes an AWS CloudWatch log event as input and returns a dictionary with extracted timestamp, log level (ERROR, WARN, INFO), and message content",
+    "format": "python",
+    "solution_criteria": "The function should parse unstructured log strings, correctly identify log levels using pattern matching, and return a clean dictionary with the three required fields"
   }
 ]

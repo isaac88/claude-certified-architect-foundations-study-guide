@@ -1,0 +1,49 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "168",
+      "weight": "58",
+      "goal": "High-performance rock climbing with sustained energy and strength",
+      "restrictions": "Vegetarian, nut allergy"
+    },
+    "solution_criteria": [
+      "Meal plan includes 4+ meals/snacks across the day with adequate protein (minimum 1.2g per kg body weight) from non-nut vegetarian sources",
+      "All meals are nut-free and vegetarian with no cross-contamination risks",
+      "Plan is compact and concise (fits on single page or brief format)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a lightweight athlete (rock climber) with multiple dietary restrictions (vegetarian + nut allergy) to ensure the meal plan is both nutritionally adequate and safely accommodates constraints"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "95 kg",
+      "goal": "Build muscle while reducing body fat through strength training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Plan contains 4-6 meals distributed throughout the day with high protein intake (minimum 160g total)",
+      "Daily caloric deficit appropriate for fat loss while supporting muscle gain (2200-2400 kcal estimated)",
+      "Includes protein-rich sources at each meal and prioritizes whole foods suitable for a weightlifter",
+      "Compact format with clear meal times, portions, and macronutrient breakdown"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength-focused athlete (weightlifter) who is overweight and aims for muscle gain while reducing body fat, to assess how the plan balances protein intake with caloric management"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "70 kg",
+      "goal": "Marathon training with sustained energy and carbohydrate loading",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Plan prioritizes carbohydrates (55-65% of calories) to support endurance training",
+      "Total daily calories align with high athletic demands (approximately 3000-3500 kcal)",
+      "Includes 4-5 meals/snacks with sustained-release energy sources (whole grains, legumes, fruits)",
+      "Plan is concise and formatted for single day consumption"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an endurance athlete (marathon runner) with high caloric needs, average build, and no dietary restrictions to verify the plan prioritizes carbohydrates and sustained energy"
+  }
+]
