@@ -5,7 +5,7 @@ Course C, section: "Structure with XML tags" (prompt-engineering block,
 technique 2).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287741
 
 WHAT THIS TEACHES
     XML tags mark where one kind of content ends and another begins, so the
@@ -44,17 +44,23 @@ RUN
     From the repo root. Requires dataset-meal-plan.json (exercise 15).
         .venv/bin/python academy/course-c-claude-api/exercises/17-structure-with-xml-tags.py
 
-    MEASURED 1 Sep 2026, claude-haiku-4-5, same control:
-        9, 9, 9  -> average 9.00 over 3 cases (14s)
+    MEASURED 1 Sep 2026, claude-haiku-4-5, same control, two runs:
+        run 1: 9, 9, 9  -> average 9.00 (14s)
+        run 2: 8, 7, 9  -> average 8.00 (committed outputs are this run's)
         v2 (exercise 16): 8.33 and 7.67 over two runs, noise ~0.7
 
-    Read this the disciplined way: +0.67 against v2's better run is AT the
-    noise floor, so one run of three cases cannot claim the mean moved —
-    exactly the modest result the lesson predicts for a prompt this simple.
-    The suggestive part is the spread: 9/9/9 is the first zero-spread run
-    of the block (v2's runs: 7-9 and 6-9). Consistent with tags helping
-    consistency rather than peak quality — but proving that would take
-    repeated runs, not one lucky triple.
+    Run 1's zero spread looked like tags buying consistency; run 1's own
+    caveat said proving that would take repeated runs, not one lucky
+    triple. Run 2 settled it: the triple WAS luck. Both v3 runs sit inside
+    v2's band once noise is respected — on a prompt this simple, XML tags
+    produced NO measurable change, which is precisely what the lesson
+    predicts. The technique's value lives where this eval does not look
+    (mixed bulk content, injection resistance).
+
+    A knock-on worth noticing: run 2 REPLACED 17-output.json, so the 9/10
+    rock-climber output that exercise 18 uses as its one-shot example no
+    longer exists in that file. 18 froze the example verbatim instead of
+    loading it at runtime — this is the scenario that decision was for.
 """
 
 import sys
