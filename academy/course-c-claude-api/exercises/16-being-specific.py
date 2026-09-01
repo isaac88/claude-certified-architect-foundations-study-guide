@@ -4,7 +4,7 @@ Exercise 16 — being specific.
 Course C, section: "Being specific" (prompt-engineering block, technique 1).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287740
 
 WHAT THIS TEACHES
     The first and cheapest technique: tell the model exactly what the output
@@ -41,8 +41,12 @@ RUN
         .venv/bin/python academy/course-c-claude-api/exercises/16-being-specific.py
 
     MEASURED 1 Sep 2026, claude-haiku-4-5, same control as exercise 15:
-        9, 7, 9  -> average 8.33 over 3 cases (12s)
+        run 1: 9, 7, 9  -> average 8.33 over 3 cases (12s)
+        run 2: 9, 6, 8  -> average 7.67 (committed outputs are this run's)
         baseline (15, naive prompt): 2, 5, 7 -> 4.67
+    Run-to-run variance on an UNCHANGED prompt and control is ~0.7. Keep
+    that number in mind for the rest of the block: a technique that "moves"
+    the average by less than the noise floor has not demonstrated anything.
 
     Both things moved, and the second matters more:
         mean    4.67 -> 8.33   (the lesson's own jump was 3.92 -> 7.86)
