@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Create a JSON configuration file for an AWS Lambda function that processes S3 events, with environment variables for the target bucket name and log level",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that takes an AWS S3 bucket name and returns True if the bucket name is valid according to AWS naming rules (3-63 characters, lowercase letters, numbers, and hyphens only, must start and end with letter or number)",
+    "format": "python"
+  },
+  {
+    "task": "Create a regex pattern that matches valid AWS IAM role ARNs in the format: arn:aws:iam::123456789012:role/RoleName",
+    "format": "regex"
+  }
+]
