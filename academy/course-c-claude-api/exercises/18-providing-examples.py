@@ -52,8 +52,11 @@ RUN
         .venv/bin/python academy/course-c-claude-api/exercises/18-providing-examples.py
 
     MEASURED 1 Sep 2026, claude-haiku-4-5, same control:
-        8 (rock climber, CONTAMINATED), 9, 8  -> average 8.33 (17s)
-        v3 (exercise 17): 9.00; noise ~0.7
+        run 1: 8 (rock climber, CONTAMINATED), 9, 8  -> average 8.33 (17s)
+        run 2: 9 (contaminated), 9, 7           -> average 8.33 (committed)
+        v3 (exercise 17): 9.00 and 8.00 over two runs; noise ~0.7
+    Two runs, same mean, shuffled per-case scores — the per-case numbers
+    are noisier than the average. v4 == v3 within noise either way.
 
     -0.67 vs v3 — within the noise floor, so the run shows NO measurable
     change, exactly what ceiling + a mechanical rubric predicts. The detail
