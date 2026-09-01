@@ -1,0 +1,438 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.3 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a strength-focused athlete (weightlifter) who is overweight and aims for muscle gain while reducing body fat, to assess how the plan balances protein intake with caloric management</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 95 kg<br><strong>goal:</strong> Build muscle while reducing body fat through strength training<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Plan contains 4-6 meals distributed throughout the day with high protein intake (minimum 160g total)<br>• Daily caloric deficit appropriate for fat loss while supporting muscle gain (2200-2400 kcal estimated)<br>• Includes protein-rich sources at each meal and prioritizes whole foods suitable for a weightlifter<br>• Compact format with clear meal times, portions, and macronutrient breakdown</td>
+                <td class="output"><pre># Nutrition Plan for Body Recomposition
+
+## Daily Calorie Target: 2,400-2,500 kcal
+**Rationale:** Slight caloric deficit (400-500 below maintenance) supports fat loss while adequate protein preserves muscle during strength training.
+
+---
+
+## Macronutrient Targets
+- **Protein:** 190-200g (31% of calories)
+- **Carbs:** 270-290g (45% of calories)
+- **Fat:** 65-75g (24% of calories)
+
+---
+
+## Sample Daily Meal Plan
+
+### **Breakfast (7:00 AM) | 550 kcal**
+- Oatmeal: 80g dry
+- Whole eggs: 3 (150g)
+- Banana: 120g
+- Honey: 15g
+
+*Protein: 18g | Carbs: 68g | Fat: 14g*
+
+---
+
+### **Mid-Morning Snack (10:00 AM) | 200 kcal**
+- Greek yogurt (0%): 200g
+- Granola: 30g
+- Berries: 80g
+
+*Protein: 20g | Carbs: 28g | Fat: 1g*
+
+---
+
+### **Lunch (1:00 PM) | 550 kcal**
+- Chicken breast: 200g (grilled/baked)
+- Brown rice: 150g cooked
+- Olive oil: 10ml
+- Broccoli: 150g
+
+*Protein: 52g | Carbs: 62g | Fat: 12g*
+
+---
+
+### **Pre-Workout Snack (3:30 PM) | 250 kcal**
+- White bread: 80g
+- Peanut butter: 30g
+- Apple: 180g
+
+*Protein: 10g | Carbs: 38g | Fat: 10g*
+
+---
+
+### **Dinner (7:00 PM) | 600 kcal**
+- Lean ground beef (90%): 220g
+- Sweet potato: 200g baked
+- Mixed vegetables: 200g
+- Canola oil: 10ml
+
+*Protein: 50g | Carbs: 65g | Fat: 18g*
+
+---
+
+### **Evening (if needed) | 250 kcal**
+- Casein or whey protein: 30g
+- Milk (2%): 200ml
+- Almonds: 25g
+
+*Protein: 35g | Carbs: 12g | Fat: 8g*
+
+---
+
+## Daily Totals
+- **Calories:** 2,400
+- **Protein:** 185g
+- **Carbs:** 273g
+- **Fat:** 63g
+
+---
+
+## Additional Tips
+✓ Drink 3-4L water daily  
+✓ Eat post-workout meal within 1-2 hours of training  
+✓ Adjust calories if no progress in 3-4 weeks  
+✓ Include vegetables for micronutrients and satiety  
+✓ Budget-friendly: eggs, oats, chicken, rice, ground beef are economical</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it provides daily caloric total (2,400 kcal), complete macronutrient breakdown (185g protein, 273g carbs, 63g fat), and 6 meals throughout the day with exact portions and timing. It meets all secondary criteria with high protein at each meal (18-52g range), whole food sources appropriate for weightlifters, and a compact format with clear breakdowns. The deficit of 400-500 kcal is appropriate for the stated goal. Minor weaknesses exist around individualization of maintenance calories and workout timing flexibility, but these do not violate stated criteria. The plan is well-structured, practical, and exceeds the minimum requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an endurance athlete (marathon runner) with high caloric needs, average build, and no dietary restrictions to verify the plan prioritizes carbohydrates and sustained energy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 70 kg<br><strong>goal:</strong> Marathon training with sustained energy and carbohydrate loading<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Plan prioritizes carbohydrates (55-65% of calories) to support endurance training<br>• Total daily calories align with high athletic demands (approximately 3000-3500 kcal)<br>• Includes 4-5 meals/snacks with sustained-release energy sources (whole grains, legumes, fruits)<br>• Plan is concise and formatted for single day consumption</td>
+                <td class="output"><pre># Marathon Training Nutrition Plan
+
+## Daily Calorie Target: 2,800-3,200 calories
+*(Varies based on training intensity; increase on long run days)*
+
+**Macronutrient Targets:**
+- **Carbohydrates:** 400-480g (55-60% of calories)
+- **Protein:** 105-140g (15% of calories)
+- **Fat:** 78-107g (25-30% of calories)
+
+---
+
+## Daily Meal Plan
+
+### **BREAKFAST (7:00 AM)** — 650 cal
+- Oatmeal: 80g dry
+- Banana: 150g
+- Honey: 20g
+- Whole milk: 250ml
+- Almonds: 20g
+
+*Carbs: 110g | Protein: 18g | Fat: 15g*
+
+---
+
+### **MID-MORNING SNACK (10:00 AM)** — 300 cal
+- Greek yogurt: 200g
+- Granola: 40g
+- Berries: 100g
+
+*Carbs: 45g | Protein: 20g | Fat: 5g*
+
+---
+
+### **LUNCH (1:00 PM)** — 700 cal
+- Brown rice: 150g cooked
+- Grilled chicken breast: 150g
+- Olive oil: 15ml
+- Mixed vegetables (broccoli, carrots): 200g
+- Whole wheat bread: 50g
+
+*Carbs: 90g | Protein: 40g | Fat: 18g*
+
+---
+
+### **PRE-RUN SNACK (3:30 PM on training days)** — 250 cal
+- White bread: 80g
+- Peanut butter: 25g
+- Apple: 150g
+
+*Carbs: 55g | Protein: 10g | Fat: 8g*
+
+---
+
+### **DINNER (7:00 PM)** — 700 cal
+- Whole wheat pasta: 100g dry
+- Ground turkey: 150g
+- Tomato sauce: 150g
+- Parmesan cheese: 20g
+- Olive oil: 10ml
+- Side salad: 100g with dressing
+
+*Carbs: 85g | Protein: 35g | Fat: 15g*
+
+---
+
+### **EVENING SNACK (9:00 PM)** — 200 cal
+- Cottage cheese: 150g
+- Honey: 15g
+- Walnuts: 15g
+
+*Carbs: 15g | Protein: 22g | Fat: 8g*
+
+---
+
+## **Carb-Loading Strategy (3 days before race)**
+- Increase carbs to **550-600g daily**
+- Reduce fiber and fat slightly (easier digestion)
+- Maintain hydration: **3-4 liters water daily**
+
+## **Hydration**
+- Daily: 3-4 liters water
+- During runs >90 min: Sports drink (6-8% carbs) every 45 min
+- Post-run: 500ml chocolate milk within 30 min
+
+---
+
+**Daily Totals: ~2,800 cal | 400g carbs | 145g protein | 69g fat**</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements with specific daily totals, detailed macronutrient breakdown, and five timed meals with exact portions. Carbohydrate prioritization is strong at 57% of calories from quality sources. However, the primary deficiency is the total caloric content at 2,800 calories, which falls short of the 3000-3500 kcal guideline for an athlete in marathon training. While the plan is well-formatted and nutritionally sound, the caloric insufficiency represents a meaningful gap in meeting the secondary criterion for high athletic demands. The solution is competent but not optimally calibrated for the stated goal.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a lightweight athlete (rock climber) with multiple dietary restrictions (vegetarian + nut allergy) to ensure the meal plan is both nutritionally adequate and safely accommodates constraints</td>
+                <td class="prompt-inputs"><strong>height:</strong> 168<br><strong>weight:</strong> 58<br><strong>goal:</strong> High-performance rock climbing with sustained energy and strength<br><strong>restrictions:</strong> Vegetarian, nut allergy</td>
+                <td class="criteria">• Meal plan includes 4+ meals/snacks across the day with adequate protein (minimum 1.2g per kg body weight) from non-nut vegetarian sources<br>• All meals are nut-free and vegetarian with no cross-contamination risks<br>• Plan is compact and concise (fits on single page or brief format)</td>
+                <td class="output"><pre># High-Performance Rock Climbing Nutrition Plan
+
+## Daily Calorie & Macro Targets
+
+**BMI:** 20.5 (healthy range)  
+**Daily Calories:** 2,400-2,600 kcal (for climbing performance + muscle maintenance)
+
+**Macronutrient Breakdown:**
+- **Protein:** 110-130g (18-20%)
+- **Carbohydrates:** 300-330g (50%)
+- **Fat:** 65-80g (25-30%)
+
+---
+
+## Daily Meal Plan
+
+### Breakfast (7:00 AM) — 550 kcal
+- Oatmeal: 60g dry
+- Greek yogurt: 200g
+- Blueberries: 100g
+- Honey: 15g
+- Seeds (sunflower/pumpkin): 20g
+
+**Macros:** 20g protein | 75g carbs | 12g fat
+
+---
+
+### Mid-Morning Snack (10:00 AM) — 250 kcal
+- Whole grain bread: 60g
+- Hummus: 40g
+- Cucumber: 100g
+- Apple: 150g
+
+**Macros:** 8g protein | 40g carbs | 6g fat
+
+---
+
+### Lunch (1:00 PM) — 650 kcal
+- Lentil & chickpea salad: 200g (cooked lentils 100g + chickpeas 80g)
+- Quinoa: 75g cooked
+- Spinach: 50g
+- Bell pepper: 80g
+- Olive oil dressing: 15ml
+
+**Macros:** 28g protein | 65g carbs | 18g fat
+
+---
+
+### Pre-Climbing Snack (3:30 PM) — 300 kcal
+- Rice cakes: 40g
+- Peanut butter alternative (tahini): 25g
+- Banana: 120g
+
+**Macros:** 10g protein | 40g carbs | 10g fat
+
+---
+
+### Dinner (7:00 PM) — 600 kcal
+- Tofu or tempeh stir-fry: 180g
+- Brown rice: 100g cooked
+- Broccoli: 150g
+- Carrots: 80g
+- Sesame oil: 10ml
+
+**Macros:** 28g protein | 60g carbs | 18g fat
+
+---
+
+### Evening (if needed — 200 kcal)
+- Whole milk: 250ml
+- Cocoa powder (unsweetened): 10g
+
+**Macros:** 8g protein | 12g carbs | 8g fat
+
+---
+
+## Daily Totals
+- **Calories:** 2,550
+- **Protein:** 102g
+- **Carbohydrates:** 292g
+- **Fat:** 72g
+
+---
+
+## Key Performance Tips
+
+✓ **Hydration:** 3-4L water daily; add electrolytes on climbing days  
+✓ **Timing:** Eat carbs 2-3 hours before climbing; protein + carbs after  
+✓ **Budget:** Lentils, chickpeas, oats, and seasonal vegetables are cheapest  
+✓ **Protein sources:** Greek yogurt, legumes, tofu, tempeh, seeds, whole grains  
+✓ **Avoid:** All tree nuts and peanuts; check labels for cross-contamination
+
+This plan supports muscle recovery, sustained energy for long climbs, and maintains a healthy BMI.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it includes daily caloric total (2,550 kcal), complete macronutrient breakdown (102g protein, 292g carbs, 72g fat), and 6 meals/snacks with exact foods, portions, and timing. Protein at 102g exceeds the 1.2g/kg requirement (69.6g minimum for 58kg athlete). All meals are vegetarian and nut-free with appropriate warnings. The plan is compact despite formatting touches. Secondary criteria are met: the solution addresses the athlete's climbing-specific needs with proper carb-to-protein ratios, includes hydration guidance, and respects dietary restrictions thoroughly. The macronutrient percentages (18-20% protein, 50% carbs, 25-30% fat) are appropriate for endurance + strength training. Minor concerns about GI tolerance timing don't significantly impact the overall quality of a generally well-designed meal plan.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
