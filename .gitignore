@@ -33,3 +33,6 @@ progress/private/
 
 # Official / third-party PDFs — keep local, do not publish
 *.pdf
+
+# Exercise 25's sandbox — wiped and regenerated on every run
+academy/course-c-claude-api/exercises/25-workdir/
