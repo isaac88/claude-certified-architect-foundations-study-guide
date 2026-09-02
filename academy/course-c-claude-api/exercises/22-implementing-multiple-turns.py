@@ -4,7 +4,7 @@ Exercise 22 — implementing multiple turns (the agentic loop).
 Course C, section: "Implementing multiple turns" (Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287758
     Code from the official 001_tools_008.ipynb.
 
 WHAT THIS TEACHES
