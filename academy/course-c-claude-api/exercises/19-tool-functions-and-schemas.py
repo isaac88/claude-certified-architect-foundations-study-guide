@@ -5,7 +5,7 @@ Course C, sections: "Introducing tool use" / "Tool functions" / "Tool
 schemas" (start of the Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    http://anthropic.skilljar.com/claude-with-the-anthropic-api/287753
     Code from the official 001_tools.ipynb.
 
 WHAT THIS TEACHES
