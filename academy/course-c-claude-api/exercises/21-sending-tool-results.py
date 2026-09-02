@@ -4,7 +4,7 @@ Exercise 21 — sending tool results.
 Course C, section: "Sending tool results" (Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287752
 
 WHAT THIS TEACHES
     Steps 3-5 of the flow exercise 20 left hanging: run the function Claude
