@@ -4,7 +4,7 @@ Exercise 23 — using multiple tools.
 Course C, section: "Using multiple tools" (Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287749
     Code from the official 001_tools_009.ipynb.
 
 WHAT THIS TEACHES
