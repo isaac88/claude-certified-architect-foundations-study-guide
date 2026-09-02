@@ -31,7 +31,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [x] 7. 1.2 Multi-agent orchestration — 1 Sep 2026
 - [x] 8. 1.3 Subagent invocation — 1 Sep 2026
 - [x] 9. 1.4 Workflow enforcement — 2 Sep 2026
-- [ ] 10. 1.5 SDK hooks
+- [x] 10. 1.5 SDK hooks — 2 Sep 2026
 - [ ] 11. 1.6 Task decomposition
 - [ ] 12. 1.7 Session state
 - [ ] 13. Domain 1 practice: ___ / 10 (target 8+)
