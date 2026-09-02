@@ -4,7 +4,7 @@ Exercise 24 — fine grained tool calling (tool streaming).
 Course C, section: "Fine grained tool calling" (Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/313160
     Code from the official 003_tool_streaming_completed.ipynb.
 
 WHAT THIS TEACHES — three stages, all from the notebook
