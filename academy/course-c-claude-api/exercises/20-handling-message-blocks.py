@@ -4,7 +4,7 @@ Exercise 20 — handling message blocks.
 Course C, section: "Handling message blocks" (Tool Use block).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287757
 
 WHAT THIS TEACHES
     Two things change the moment tools enter the conversation:
