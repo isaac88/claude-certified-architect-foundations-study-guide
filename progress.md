@@ -32,7 +32,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [x] 8. 1.3 Subagent invocation — 1 Sep 2026
 - [x] 9. 1.4 Workflow enforcement — 2 Sep 2026
 - [x] 10. 1.5 SDK hooks — 2 Sep 2026
-- [ ] 11. 1.6 Task decomposition
+- [x] 11. 1.6 Task decomposition — 3 Sep 2026
 - [ ] 12. 1.7 Session state
 - [ ] 13. Domain 1 practice: ___ / 10 (target 8+)
 - [ ] 14. Exercise 1 — support agent with real loop
