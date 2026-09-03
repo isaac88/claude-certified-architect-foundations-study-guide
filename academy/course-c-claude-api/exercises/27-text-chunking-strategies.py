@@ -5,7 +5,7 @@ Course C, section: "Text chunking strategies" (RAG block; the intro
 section "Introducing Retrieval Augmented Generation" has no code).
 SOURCE
     https://anthropic.skilljar.com/claude-with-the-anthropic-api
-    (paste the section URL here)
+    https://anthropic.skilljar.com/claude-with-the-anthropic-api/287776
     Code from the official 001_chunking.ipynb.
 
 WHAT THIS TEACHES
