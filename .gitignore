@@ -36,3 +36,6 @@ progress/private/
 
 # Exercise 25's sandbox — wiped and regenerated on every run
 academy/course-c-claude-api/exercises/25-workdir/
+
+# Course C lesson assets (Anthropic Academy download, not ours to publish)
+academy/course-c-claude-api/exercises/images/
