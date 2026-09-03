@@ -22,7 +22,8 @@ The platform team shipped eleven releases this year across the data pipeline
 and the public API. Engineers fixed 128 bugs in total, of which 17 were
 classified as critical. Mean time to resolution for critical defects dropped
 from nine days to two. The migration from the legacy queue to the new event
-bus completed in August with zero data loss. Test coverage rose from 71% to
+bus completed in August with zero data loss; the one service outage during
+cutover was tracked as incident INC-2026-Q3-042 and closed within four hours. Test coverage rose from 71% to
 88%, and the team adopted mandatory code review for every change touching
 payment flows. Three engineers joined the team in the autumn hiring round.
 

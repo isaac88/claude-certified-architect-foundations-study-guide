@@ -22,11 +22,12 @@ WHAT IT IS
     vectors explicitly via add_vector (exercise 29 does the latter, so
     embedding stays visible in the exercise).
 
-NOTEBOOK BUG, recorded: 003_vectordb.ipynb's own demo cell calls
-    store.add_documents([...])   # plural
-which this class does not define (it has add_document / add_vector) —
-AttributeError on the course's happy path. Fourth course-code bug in the
-divergence log (12: {task}; 15: {prompt_inputs_spec}; 25: router name).
+NOTEBOOK BUG, recorded — then fixed by the course itself: 003_vectordb's
+demo cell calls store.add_documents([...]) which 003's class does not
+define (AttributeError on the course's happy path). One notebook later,
+005_hybrid.ipynb adds the method "to avoid rate limiting errors from
+VoyageAI" — batch-embedding all contents in one call. This module carries
+the fixed version.
 """
 
 import math
@@ -57,6 +58,31 @@ class VectorIndex:
 
         vector = self._embedding_fn(content)
         self.add_vector(vector=vector, document=document)
+
+    def add_documents(self, documents: List[Dict[str, Any]]):
+        """Batch add: embed every content in ONE embedding call (the 005
+        notebook's rate-limit fix), then store pairwise."""
+        if not self._embedding_fn:
+            raise ValueError("Embedding function not provided during initialization.")
+        if not isinstance(documents, list):
+            raise TypeError("Documents must be a list of dictionaries.")
+        if not documents:
+            return
+
+        contents = []
+        for i, doc in enumerate(documents):
+            if not isinstance(doc, dict):
+                raise TypeError(f"Document at index {i} must be a dictionary.")
+            if "content" not in doc:
+                raise ValueError(f"Document at index {i} must contain a 'content' key.")
+            if not isinstance(doc["content"], str):
+                raise TypeError(f"Document 'content' at index {i} must be a string.")
+            contents.append(doc["content"])
+
+        vectors = self._embedding_fn(contents)
+
+        for vector, document in zip(vectors, documents):
+            self.add_vector(vector=vector, document=document)
 
     def add_vector(self, vector, document: Dict[str, Any]):
         if not isinstance(vector, list) or not all(
