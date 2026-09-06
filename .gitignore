@@ -39,3 +39,7 @@ academy/course-c-claude-api/exercises/25-workdir/
 
 # Course C lesson assets (Anthropic Academy download, not ours to publish)
 academy/course-c-claude-api/exercises/images/
+academy/course-c-claude-api/exercises/streaming.csv
+academy/course-c-claude-api/exercises/37-churn_drivers_analysis.png
+academy/course-c-claude-api/exercises/37-churn_executive_summary.png
+academy/course-c-claude-api/exercises/37-churn_analysis_summary.txt
