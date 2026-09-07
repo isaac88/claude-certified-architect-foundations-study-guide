@@ -1,4 +1,5 @@
 from typing import List, Tuple
+from mcp.shared.exceptions import McpError
 from mcp.types import Prompt, PromptMessage
 from anthropic.types import MessageParam
 
@@ -55,9 +56,21 @@ class CliChat(Chat):
         words = query.split()
         command = words[0].replace("/", "")
 
-        messages = await self.doc_client.get_prompt(
-            command, {"doc_id": words[1]}
-        )
+        # Shipped scaffolding indexed words[1] unguarded: "/format" with no
+        # document crashed the whole CLI with IndexError.
+        if len(words) < 2:
+            print(f"Usage: /{command} <doc_id> — e.g. /{command} plan.md")
+            return True
+
+        try:
+            messages = await self.doc_client.get_prompt(
+                command, {"doc_id": words[1]}
+            )
+        except McpError as e:
+            # An unknown command arrives as a protocol error — report it,
+            # don't let it kill the CLI.
+            print(f"/{command}: {e}")
+            return True
 
         self.messages += convert_prompt_messages_to_message_params(messages)
         return True

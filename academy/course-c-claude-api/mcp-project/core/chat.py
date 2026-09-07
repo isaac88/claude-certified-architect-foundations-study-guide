@@ -21,6 +21,11 @@ class Chat:
 
         await self._process_query(query)
 
+        # A handled command may add no message (e.g. usage hint printed);
+        # calling the API with an empty history would 400.
+        if not self.messages:
+            return final_text_response
+
         while True:
             response = self.claude_service.chat(
                 messages=self.messages,
