@@ -43,3 +43,7 @@ academy/course-c-claude-api/exercises/streaming.csv
 academy/course-c-claude-api/exercises/37-churn_drivers_analysis.png
 academy/course-c-claude-api/exercises/37-churn_executive_summary.png
 academy/course-c-claude-api/exercises/37-churn_analysis_summary.txt
+
+# Exercise 45's test fixtures (Anthropic Academy download, not ours to publish)
+# — re-download app_starter.zip from lesson 287805 if missing
+academy/course-c-claude-api/claude-code-project/tests/fixtures/
