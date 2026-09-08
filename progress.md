@@ -35,7 +35,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [x] 11. 1.6 Task decomposition — 3 Sep 2026
 - [x] 12. 1.7 Session state — 3 Sep 2026
 - [x] 13. Domain 1 practice: 10 / 10 (target 8+) — 3 Sep 2026, options reshuffled in chat, no anchoring
-- [ ] 14. Exercise 1 — support agent with real loop
+- [x] 14. Exercise 1 — support agent with real loop — 8 Sep 2026, credited against course C ex. 22-23 (loop, router, multi-tool, is_error results all built + gap-checked); gate/hooks/structured-error fields deferred to step 19 (Exercise 1 hardened)
 
 ## Phase 2 — Domain 2 then Domain 5
 
