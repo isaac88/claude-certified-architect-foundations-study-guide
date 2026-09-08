@@ -19,7 +19,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 - [x] A. AI Fluency: Framework & Foundations (100) — optional if already fluent
 - [x] B. Claude 101 (100) — done 30 Aug 2026
-- [ ] C. Building with the Claude API (100–200) — **started 31 Aug 2026**, doing it in full before step 6. Code: [academy/course-c-claude-api](academy/course-c-claude-api/)
+- [x] C. Building with the Claude API (100–200) — **COMPLETE 8 Sep 2026: final assessment 23/23 (100%)**. Every quiz 100% (tool use, Features 7/7, MCP 6/6, Claude Code 7/7). 45 exercises coded: [academy/course-c-claude-api](academy/course-c-claude-api/)
 - [ ] D. Claude with Amazon Bedrock (100–200) — only if you use Bedrock
 - [ ] E. Claude on Google Cloud (100–200) — only if you use GCP
 - [ ] F. Introduction to Model Context Protocol (200) — **pair with Domain 2**
