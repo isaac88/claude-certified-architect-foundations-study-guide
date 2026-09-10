@@ -22,7 +22,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [x] C. Building with the Claude API (100–200) — **COMPLETE 8 Sep 2026: final assessment 23/23 (100%)**. Every quiz 100% (tool use, Features 7/7, MCP 6/6, Claude Code 7/7). 45 exercises coded: [academy/course-c-claude-api](academy/course-c-claude-api/)
 - [ ] D. Claude with Amazon Bedrock (100–200) — only if you use Bedrock
 - [ ] E. Claude on Google Cloud (100–200) — only if you use GCP
-- [ ] F. Introduction to Model Context Protocol (200) — **pair with Domain 2**
+- [x] F. Introduction to Model Context Protocol (200) — done 10 Sep 2026, final quiz **7/7**; content was already covered by course C ex. 38–44 + exercise 5 lab
 - [ ] G. Claude Code in Action (200) — **pair with Domain 3**
 
 ## Phase 1 — Domain 1 (27%)
