@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "support-desk": {
+      "command": ".venv/bin/python",
+      "args": ["practice/exercise-5-tool-contract-lab/mcp_server.py"],
+      "env": {
+        "SUPPORT_DESK_API_KEY": "${SUPPORT_DESK_API_KEY}",
+        "TOOL_DESCRIPTIONS": "${TOOL_DESCRIPTIONS:-full}"
+      }
+    }
+  }
+}
