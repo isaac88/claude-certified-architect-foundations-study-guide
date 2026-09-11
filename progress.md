@@ -23,7 +23,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [ ] D. Claude with Amazon Bedrock (100–200) — only if you use Bedrock
 - [ ] E. Claude on Google Cloud (100–200) — only if you use GCP
 - [x] F. Introduction to Model Context Protocol (200) — done 10 Sep 2026, final quiz **7/7**; content was already covered by course C ex. 38–44 + exercise 5 lab
-- [ ] G. Claude Code in Action (200) — **pair with Domain 3**
+- [x] G. Claude Code in Action (200) — done 11 Sep 2026, final quiz **8/8** (seventh consecutive perfect quiz); whole course sat in one go. Hands-on builds (hooks, commands, headless) still land in the repo paired with Domain 3 files
 
 ## Phase 1 — Domain 1 (27%)
 
