@@ -47,7 +47,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 ## Phase 3 — Domain 3 then Domain 4
 
-- [ ] 20. Domain 3 files 3.1–3.6
+- [x] 20. Domain 3 files 3.1–3.6 — 12 Sep 2026 (3.1 on 11 Sep; 3.2–3.6 in one sitting, 12 Sep, alongside Build 2 — the biggest single-day span yet)
 - [ ] 21. Domain 3 practice: ___ / 8 (target 7+)
 - [ ] 22. Exercise 2 — Claude Code team workflow
 - [ ] 23. Domain 4 files 4.1–4.6
