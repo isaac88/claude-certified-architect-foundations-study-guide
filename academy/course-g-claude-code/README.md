@@ -31,5 +31,9 @@ what crosses the boundary back, not just what the worker does.
 
 ## Verification log
 
-- `/next-step` run in a fresh session: _pending — see check below_
-- `repo-audit` invoked and observed to fork (working absent from main thread): _pending_
+- `repo-audit all` invoked live 12 Sep 2026: ran as a **forked** execution, returned
+  only the contract-shaped report (3× PASS); the working — `git ls-files` output and
+  the 37-row index cross-check — never entered the parent thread. Both artefacts
+  registered as invocable the moment their files landed on disk: registration is the
+  directory, no config entry anywhere.
+- `/next-step` run by the student in a fresh interactive session: _pending_
