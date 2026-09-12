@@ -36,4 +36,8 @@ what crosses the boundary back, not just what the worker does.
   the 37-row index cross-check — never entered the parent thread. Both artefacts
   registered as invocable the moment their files landed on disk: registration is the
   directory, no config entry anywhere.
-- `/next-step` run by the student in a fresh interactive session: _pending_
+- `/next-step` run by the student in a fresh interactive session, 12 Sep 2026: correct
+  on all three points (step 19 first unticked; no numbered skips; D/E deliberate).
+  Bonus finding: its implication line lagged the live plan — the command reads only
+  `progress.md`, and the resequencing note lived elsewhere. Fixed at the source
+  (step 19's line now carries the note), not in the command: instance-vs-source.
