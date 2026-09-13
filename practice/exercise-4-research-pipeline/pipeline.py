@@ -38,6 +38,7 @@ from typing import Any
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
+import fixtures
 from fixtures import CONFLICT_FIGURES, DOCUMENTS, SimulatedTimeout, search
 
 HERE = Path(__file__).parent
@@ -304,6 +305,7 @@ class Pipeline:
     # -- coordinator ----------------------------------------------------------
 
     def run(self, max_turns: int = 12) -> None:
+        fixtures.reset()  # the journal's first-call timeout is per run, not per process
         system = COORDINATOR_SYSTEM.replace("{case_facts}", case_facts_block())
         messages: list[dict] = [{"role": "user", "content": f"Start run {CASE_FACTS['run_id']}."}]
         last_status: list[str] = []
