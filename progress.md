@@ -56,7 +56,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 ## Phase 4 — Lock together
 
-- [ ] 26. Exercise 4 finished (research pipeline) — built and verified live 13 Sep 2026 (6/6 measured checks): [practice/exercise-4-research-pipeline](practice/exercise-4-research-pipeline/); ticks after the gap-check in chat
+- [x] 26. Exercise 4 finished (research pipeline) — built and verified live 13 Sep 2026 (6/6 measured checks): [practice/exercise-4-research-pipeline](practice/exercise-4-research-pipeline/). Gap-check 13 Sep: Q1 half+FAIL (empty-vs-error inverted in timeout costume — said ok+`[]` triggers a retry; it's the do-not-retry signal), Q2–4 answered by teaching at the student's request, not passed. Step 28 mixed set MUST retest cold: empty-vs-error in timeout costume, trim-per-consumer, deterministic provenance join, dedup ownership (source_id). Same day, in the session that built the lab, all four were attempted unprompted: Q3 and Q4 passed, Q1 and Q2 half — retest queue unchanged
 - [ ] 27. Decision rules from memory
 - [ ] 28. Mixed set: ___ / 12 (target 10+)
 - [ ] 29. Official Academy practice exam
