@@ -1,0 +1,100 @@
+{
+ "case_facts": {
+  "run_id": "RUN-2026-09-13-geo",
+  "question": "What is the current state of geothermal energy in Europe: installed electricity capacity, recent growth, and the policy direction?",
+  "region": "Europe",
+  "period": "publications dated 2022 to 2025 only",
+  "output": "Markdown report; key findings first; every figure in a table with source and date",
+  "conflict_policy": "two sources disagree on a figure -> show both with dates; never pick one, never average",
+  "documents": "doc-egc-heating-2024"
+ },
+ "findings": [
+  {
+   "id": "F1",
+   "claim": "Installed geothermal electricity capacity in Europe reached 3.5 GW at the end of 2022 across 142 operating plants, with growth concentrated in T\u00fcrkiye, Italy and Iceland.",
+   "url": "https://example.org/egc/market-report-2022",
+   "title": "European Geothermal Council \u2014 Geothermal Market Report 2022",
+   "excerpt": "Installed geothermal electricity capacity in Europe reached 3.5 GW at the end of 2022, with 142 plants in operation. Growth was concentrated in T\u00fcrkiye, Italy and Iceland.",
+   "excerpt_verbatim": true,
+   "date": "2023-02-14",
+   "source_id": "web-1"
+  },
+  {
+   "id": "F2",
+   "claim": "Europe's geothermal power capacity stood at 4.0 GW at end-2024, up 4% year on year, and remains under 1% of the region's renewable electricity capacity.",
+   "url": "https://example.org/grsa/renewable-capacity-statistics-2025",
+   "title": "Global Renewables Statistics Agency \u2014 Renewable Capacity Statistics 2025",
+   "excerpt": "Europe's geothermal power capacity stood at 4.0 GW at end-2024, up 4% year on year. Geothermal remains under 1% of the region's renewable electricity capacity.",
+   "excerpt_verbatim": true,
+   "date": "2025-03-27",
+   "source_id": "web-2"
+  },
+  {
+   "id": "F3",
+   "claim": "A 12-country European review found the median time from exploration licence to plant commissioning was 6.5 years, identifying permitting rather than resource risk as the binding constraint on geothermal policy.",
+   "url": "https://example.org/journal/geo-policy/permitting-bottlenecks",
+   "title": "Permitting bottlenecks for geothermal power in Europe: a 12-country review",
+   "excerpt": "Across twelve European countries the median time from exploration licence to plant commissioning was 6.5 years; permitting, not resource risk, was the binding constraint on geothermal policy.",
+   "excerpt_verbatim": true,
+   "date": "2024-06-01",
+   "source_id": "jnl-1"
+  },
+  {
+   "id": "F4",
+   "claim": "Geothermal district heating in Europe reached 412 systems in operation at the end of 2023, with a further 300 projects under development, with France, Germany and the Netherlands accounting for most new capacity.",
+   "url": "local://doc-egc-heating-2024",
+   "title": "European Geothermal Council \u2014 Geothermal Heating and Cooling Outlook 2024",
+   "excerpt": "Geothermal district heating in Europe reached 412 systems in operation at the end of 2023, with a further 300 projects under development. France, Germany and the Netherlands account for most new capacity.",
+   "excerpt_verbatim": true,
+   "date": "2024-06-20",
+   "source_id": "doc-egc-heating-2024"
+  },
+  {
+   "id": "F5",
+   "claim": "The outlook projects that geothermal district heating could supply 25% of Europe's heat demand by 2040 if drilling costs fall by a third.",
+   "url": "local://doc-egc-heating-2024",
+   "title": "European Geothermal Council \u2014 Geothermal Heating and Cooling Outlook 2024",
+   "excerpt": "The outlook estimates that district heating could supply 25% of Europe's heat demand by 2040 if drilling costs fall by a third.",
+   "excerpt_verbatim": true,
+   "date": "2024-06-20",
+   "source_id": "doc-egc-heating-2024"
+  },
+  {
+   "id": "F6",
+   "claim": "On policy context, survey respondents rank permitting time as the top market barrier, geological risk second and access to capital third, and only six countries operate a public risk-insurance scheme.",
+   "url": "local://doc-egc-heating-2024",
+   "title": "European Geothermal Council \u2014 Geothermal Heating and Cooling Outlook 2024",
+   "excerpt": "Respondents in the council's survey rank permitting time first and geological risk second; access to capital ranks third. Only six countries operate a public risk-insurance scheme.",
+   "excerpt_verbatim": true,
+   "date": "2024-06-20",
+   "source_id": "doc-egc-heating-2024"
+  },
+  {
+   "id": "F7",
+   "claim": "A 12-country European review found the median time from exploration licence to geothermal plant commissioning was 6.5 years, identifying permitting rather than resource risk as the binding policy constraint.",
+   "url": "https://example.org/journal/geo-policy/permitting-bottlenecks",
+   "title": "Permitting bottlenecks for geothermal power in Europe: a 12-country review",
+   "excerpt": "Across twelve European countries the median time from exploration licence to plant commissioning was 6.5 years; permitting, not resource risk, was the binding constraint on geothermal policy.",
+   "excerpt_verbatim": true,
+   "date": "2024-06-01",
+   "source_id": "jnl-1"
+  },
+  {
+   "id": "F8",
+   "claim": "Public geological risk insurance schemes in four European countries increased the share of exploratory geothermal wells drilled by non-utility developers from 12% to 31% within five years.",
+   "url": "https://example.org/journal/geo-policy/risk-insurance",
+   "title": "Geological risk insurance schemes as geothermal policy instruments in Europe",
+   "excerpt": "Public geological risk insurance in four European countries raised the share of exploratory wells drilled by non-utility developers from 12% to 31% within five years.",
+   "excerpt_verbatim": true,
+   "date": "2022-11-30",
+   "source_id": "jnl-3"
+  }
+ ],
+ "gaps": [
+  {
+   "section": "Establish the policy direction for geothermal energy in Europe: EU strategies, directives, targets and national frameworks, 2022-2025.",
+   "query": "European Union geothermal energy policy direction regulation strategy",
+   "reason": "journal search 'European Union geothermal energy policy direction regulation strategy' timed out after 1 of 2 results"
+  }
+ ]
+}
