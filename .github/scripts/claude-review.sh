@@ -26,6 +26,17 @@ set -euo pipefail
 
 BASE="${1:?usage: claude-review.sh <base-ref> [prior-findings.json]}"
 PRIOR="${2:-}"
+
+# Fail with a named cause, not a bare exit 1. In Actions an unset secret
+# arrives as an EMPTY variable (the log shows `ANTHROPIC_API_KEY:` with no
+# `***`), and claude then exits 1 with nothing on stderr.
+if [[ -z "${ANTHROPIC_API_KEY:-}" ]]; then
+  echo "claude-review: ANTHROPIC_API_KEY is empty. Add the repository secret (Settings → Secrets and variables → Actions) and re-run." >&2
+  exit 2
+fi
+for tool in claude jq git; do
+  command -v "$tool" >/dev/null || { echo "claude-review: $tool not on PATH" >&2; exit 2; }
+done
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SCHEMA="$(cat "$HERE/../review-schema.json")"
 
@@ -44,6 +55,7 @@ Report only findings, most severe first, with the exact file and line. Do not re
 ${PRIOR_BLOCK}"
 
 echo "claude-review: base=${BASE} prior=${PRIOR:-none} model=${CLAUDE_REVIEW_MODEL:-sonnet}" >&2
+set +e   # capture claude's exit code instead of letting set -e swallow it silently
 OUT="$(claude -p "$PROMPT" \
   --output-format json \
   --json-schema "$SCHEMA" \
@@ -51,9 +63,15 @@ OUT="$(claude -p "$PROMPT" \
   --allowedTools "Read,Grep,Glob,Bash(git diff:*),Bash(git log:*),Bash(git show:*)" \
   --no-session-persistence \
   --max-budget-usd "${CLAUDE_REVIEW_BUDGET_USD:-2}" < /dev/null)"
+CODE=$?
+set -e
 
 printf '%s\n' "$OUT"
-if [[ "$(printf '%s' "$OUT" | jq -r '.is_error')" == "true" ]]; then
+if [[ $CODE -ne 0 ]]; then
+  echo "claude-review: claude exited ${CODE}. Output (first 2000 chars): ${OUT:0:2000}" >&2
+  exit "$CODE"
+fi
+if [[ "$(printf '%s' "$OUT" | jq -r '.is_error // false')" == "true" ]]; then
   echo "claude-review: Claude reported an error: $(printf '%s' "$OUT" | jq -c '.errors // .subtype')" >&2
   exit 1
 fi
