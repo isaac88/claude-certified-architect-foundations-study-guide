@@ -1,0 +1,68 @@
+# Exercise 2 item 5 / course G Build 3: headless Claude Code review on every PR.
+# Needs the repository secret ANTHROPIC_API_KEY (Settings → Secrets → Actions).
+name: Claude review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: claude-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # the review diffs against the base branch
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      # Incremental review (3.6): the previous run's findings are embedded in its
+      # comment as an HTML comment, so this run can report only new/unaddressed ones.
+      - name: Fetch prior findings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" \
+            --jq '[.[] | select(.body | startswith("<!-- claude-review -->"))] | last | .body // ""' \
+            | sed -n 's/.*<!-- findings:\(.*\) -->.*/\1/p' > prior.json || true
+          echo "prior findings: $(wc -c < prior.json) bytes"
+
+      - name: Review (claude -p, JSON, schema-enforced)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: .github/scripts/claude-review.sh "origin/${{ github.base_ref }}" prior.json > review.json
+
+      - name: Post comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          jq -r '
+            .structured_output as $r |
+            "<!-- claude-review -->",
+            "### Claude review",
+            "",
+            $r.summary,
+            "",
+            (if ($r.findings | length) == 0 then "No findings." else
+              "| Severity | Status | Location | Rule | Change |",
+              "|---|---|---|---|---|",
+              ($r.findings[] | "| \(.severity) | \(.status) | `\(.file):\(.line)` | \(.rule) | \(.message) |")
+            end),
+            "",
+            "<sub>cost $\(.total_cost_usd | tostring | .[0:6]), \(.num_turns) turns</sub>",
+            "<!-- findings:\($r.findings | tojson) -->"
+          ' review.json > comment.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md

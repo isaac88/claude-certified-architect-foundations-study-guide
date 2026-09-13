@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "summary": { "type": "string", "description": "One sentence: mergeable as is, or what blocks it" },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "file": { "type": "string" },
+          "line": { "type": "integer" },
+          "severity": { "type": "string", "enum": ["blocker", "major", "minor"] },
+          "rule": { "type": "string", "description": "The standard or rule violated, quoted or named" },
+          "message": { "type": "string", "description": "What to change" },
+          "status": { "type": "string", "enum": ["new", "unaddressed"], "description": "unaddressed = already reported by a previous run and still present" }
+        },
+        "required": ["file", "line", "severity", "rule", "message", "status"]
+      }
+    }
+  },
+  "required": ["summary", "findings"]
+}

@@ -49,7 +49,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 
 - [x] 20. Domain 3 files 3.1–3.6 — 12 Sep 2026 (3.1 on 11 Sep; 3.2–3.6 in one sitting, 12 Sep, alongside Build 2 — the biggest single-day span yet)
 - [x] 21. Domain 3 practice: **8 / 8** (target 7+) — 13 Sep 2026, options reshuffled (key C,A,D,B,A,C,D,B). Retests: path-right-reason-differs, always-enforced-vs-always-loaded, batches-vs-per-PR all clean; fork-direction credited on the final letter but the first instinct was the inversion — retest cold again at step 28
-- [ ] 22. Exercise 2 — Claude Code team workflow
+- [x] 22. Exercise 2 — Claude Code team workflow — 13 Sep 2026, with course G Build 3: project + directory CLAUDE.md, `.claude/rules/` (tests, api), `/review`, `claude -p` review script + schema + GitHub Actions workflow; hang reproduced (trust dialog under a PTY), incremental review verified live (3 resolved findings not repeated). Actions run itself awaits the `ANTHROPIC_API_KEY` repo secret — see [academy/course-g-claude-code/README.md](academy/course-g-claude-code/README.md)
 - [ ] 23. Domain 4 files 4.1–4.6
 - [ ] 24. Domain 4 practice: ___ / 8 (target 7+)
 - [ ] 25. Exercise 3 — extraction pipeline
