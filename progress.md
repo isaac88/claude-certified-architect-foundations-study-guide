@@ -60,7 +60,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [ ] 27. Decision rules from memory
 - [ ] 28. Mixed set: ___ / 12 (target 10+)
 - [ ] 29. Official Academy practice exam
-- [ ] 30. Re-read missed task files only
+- [ ] 30. Re-read missed task files only — driven by [progress/weak-spots.md](progress/weak-spots.md): every OPEN/QUEUED/VERIFY row gets one cold item; a fail sends you to the task file named in the row
 
 ## Scenario check (after phase 4, or as you hit them)
 
