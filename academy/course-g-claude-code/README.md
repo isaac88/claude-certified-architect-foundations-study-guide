@@ -7,7 +7,7 @@ to, per the agreed build map.
 | Build | What | Lives at | Pairs with |
 |---|---|---|---|
 | 2 | `/next-step` slash command + `repo-audit` verification skill | `.claude/commands/next-step.md`, `.claude/skills/repo-audit/SKILL.md` | 3.2 commands and skills |
-| 1 | Pre-tool-use hook gate on the exercise 22/23 support agent (structured `is_error`, errorCategory, isRetryable) | pending — step 19 | G hooks section |
+| 1 | Pre-tool-use hook gate on the exercise 22/23 support agent (structured `is_error`, errorCategory, isRetryable) + a Claude Code `PreToolUse` Bash guard | `practice/exercise-1-support-agent-hardened/`, `.claude/hooks/guard-destructive-bash.sh`, `.claude/settings.json` | G hooks section / 1.4–1.5 |
 | 3 | Headless `claude -p` + GitHub Actions review (exercise 2) | `.github/scripts/claude-review.sh`, `.github/review-schema.json`, `.github/workflows/claude-review.yml`, `.claude/commands/review.md` | 3.6 CI/CD |
 
 ## Build 2 — placement decisions (the 3.2 table, made concrete)
@@ -68,4 +68,19 @@ Exercise 2's six items, where each landed and why:
 - **Run 2 live (merge push, same diff, prior = run 1's comment): success in 41 s, 9 turns, $0.18** — both remaining findings marked `unaddressed`, nothing `new`, the informational note not repeated. The incremental review is cheaper and faster because the bot re-verifies rather than re-discovers.
 - **Run 3 live (import fix pushed, prior = run 2's comment): success in 78 s, 11 turns, $0.27** — the duplicate-import finding **disappeared** (resolved, not repeated), the commit-message finding carried as `unaddressed`, and one `new` finding: the fix commit's message also misses the template. Three runs, one PR: discover → re-verify → confirm-resolved, exactly the 3.6 loop.
 - **Rule fixed, not commits:** `.claude/CLAUDE.md` named templates only for exercise and step commits, so every fix commit would be flagged forever. Added `<Area>: <what changed>` for everything else. Second time today a bot finding traced to an imprecise always-on rule (after `api.md`): **an always-on rule is a contract the reviewer enforces literally — write it for the whole codebase or it manufactures findings.**
+
+## Build 1 — hooks at both levels (14 Sep 2026)
+
+Two artefacts, one mechanism:
+
+- **SDK level (1.4/1.5):** `practice/exercise-1-support-agent-hardened/agent.py` — `pre_tool_use` gates `process_refund` (identity → ownership → £500 limit) and returns 2.2-shaped denials; `post_tool_use` normalises payloads and books state; the handoff packet is built by the harness from session facts. The system prompt deliberately omits "verify first" so the gate, not the prompt, carries the guarantee.
+- **Claude Code level (course G "Hooks"):** `.claude/hooks/guard-destructive-bash.sh` on `PreToolUse` for `Bash`, wired in the committed `.claude/settings.json`. Exit 2 + a reason on stderr = a denial the model can act on — the same shape as `is_error` + `message`.
+
+### Verification log
+
+- Hook script, JSON piped in directly: force-push and hard reset → exit 2 with reasons; `ls -la` → exit 0.
+- **Hook live through `claude -p` (2.1.148):** `echo hook-canary` denied — `permission_denials` carries the call and the model quoted the reason verbatim; `echo hook-ok` ran. Registration = file + settings entry, no restart.
+- **Agent, two live runs of the same code and prompt:** run 1 — zero gate denials (Haiku verified first and escalated by itself); run 2 — **four denials**, including scenario C attempting the refund *before* `get_customer` (the 1.4 miss, live): denied retryable → verified → retried → denied not-retryable (wrong owner) → escalated. Scenario D (no email): denied → the model asked for the email. 5/5 checks. **The 0-vs-4 variance is the teaching point: that is what "works most of the time" looks like; the gate is what makes it every time.**
+- Defect caught by the checks: model-initiated escalation produced a packet with the wrong root cause and no amount → `infer_escalation` now derives both from the session's orders. Facts from the harness, never from the model's prose.
+- **False positive one level up:** the first live hook test was blocked by the student's *global* security hook, which matched a destructive-git phrase as text inside a prompt argument (the command would only have reached a dry run). Same lesson as Build 3's rule imprecision. Answer: a harmless canary rule to prove wiring — never a workaround of the guard.
 - **Not verified from here before the secret existed:** the Actions run itself. It needs the repository secret `ANTHROPIC_API_KEY` (Settings → Secrets and variables → Actions); the first PR after that is the live test. The six valid exercise 4 findings are left open on purpose — exercise 2 is the review pipeline, not a rework of exercise 4.
