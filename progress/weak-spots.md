@@ -20,7 +20,7 @@ you back to the task file named in the row.
 
 | Weak spot | Where it showed | Status | Recheck as |
 |---|---|---|---|
-| **Layer attribution** — naming *which* layer/function did something (request vs client handling; model vs calling code; `run()` vs `search_spoke()`) | step 6 Q1 (31 Aug); step-14 gap-check G3 (answered about the model when asked about the calling code); exercise 2 gap-check 1b and 5c (14 Sep) | **OPEN — recurring** | A failure scenario with a trace; ask "which component, and which field proves it" |
+| **Layer attribution** — naming *which* layer/function did something, and *what each layer knows* (request vs client handling; model vs calling code; `run()` vs `search_spoke()`; tool vs hook for the refund limit) | step 6 Q1 (31 Aug); step-14 gap-check G3 (answered about the model when asked about the calling code); exercise 2 gap-check 1b and 5c (14 Sep); Build 1 walkthrough Q5 half — "before the tool" without "the tool doesn't know the caller's authority" (14 Sep) | **OPEN — recurring** | A failure scenario with a trace; ask "which component, and which field proves it" — and "what does that component know that the other cannot" |
 | Narrow decomposition vs failure to *dynamically select* spokes (1.2) | step 7 Q2 (1 Sep) | VERIFY (D1 practice 10/10) | Coordinator stem where the brief was complete but a spoke was never dispatched |
 | Anchoring on the previous verdict; "stake first, mechanism second" (prompt vs gate) | steps 7–9 (1–2 Sep), three rounds | VERIFY (D1 practice, letters alternated) | Two consecutive items whose right answers differ in mechanism |
 | Resume vs fresh session under a migration stem (1.7) | 1.7 Q1 half (3 Sep) | VERIFY (D1 practice Q10 correct) | Poisoned tool results vs stale files — which remedy |
@@ -36,7 +36,7 @@ you back to the task file named in the row.
 | Grep vs Glob when the stem *sounds* path-shaped | 2.x MCQ miss; held in D2 practice (9 Sep) | VERIFY | "Find every file that defines X" — name lives in content, not path |
 | Descriptions *enlarge* the haystack; similar-pair vs unrelated-many (2.3) | 2.3 Q2 circular relapse, parts 2–3 half (9 Sep) | VERIFY | Routing stem with 14 tools, two near-duplicates |
 | Instance fix vs source fix (copy a teammate's `~/.claude.json` vs repo `.mcp.json`) | 2.4 Q1 half (9 Sep); closed in 3.1 MCQ + Build 2 live | CLOSED — one cold verify | Any "fix it on my machine" distractor |
-| **Empty-vs-error in the *timeout* costume** (`[]`+ok is the do-not-retry signal) | D2 practice pass; **inverted once** 13 Sep (parallel session), corrected twice same day | **QUEUED step 28 (a)** | Turn-2 retry also times out: findings count + Coverage line, with and without partials |
+| **Empty-vs-error** — in the *timeout* costume (`[]`+ok is the do-not-retry signal) and in the *code* costume (`{"customer": None}` has no `isError` → `is_error` False) | D2 practice pass; **inverted once** 13 Sep (parallel session), corrected twice same day; **wrong again 14 Sep** in Build 1's code walkthrough (said `is_error` True for a valid-empty lookup, cited a gate line) | **OPEN — three costumes** | Turn-2 retry also times out: findings count + Coverage line, with and without partials; plus a code item: given a tool return value, what does line `is_error: bool(output.get("isError"))` produce |
 
 ## Domain 3 — Claude Code (20%)
 
