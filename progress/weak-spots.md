@@ -36,7 +36,7 @@ you back to the task file named in the row.
 | Who fixes a validation error (user vs **model**) — the who-fixes-it ladder | ex-5 gap-check G2 half (10 Sep) | VERIFY | Log shows the model normalising an id; ask who fixed it and why the ladder puts it there |
 | Grep vs Glob when the stem *sounds* path-shaped | 2.x MCQ miss; held in D2 practice (9 Sep) | VERIFY | "Find every file that defines X" — name lives in content, not path |
 | Descriptions *enlarge* the haystack; similar-pair vs unrelated-many (2.3) | 2.3 Q2 circular relapse, parts 2–3 half (9 Sep) | VERIFY | Routing stem with 14 tools, two near-duplicates |
-| Instance fix vs source fix (copy a teammate's `~/.claude.json` vs repo `.mcp.json`) | 2.4 Q1 half (9 Sep); closed in 3.1 MCQ + Build 2 live | CLOSED — one cold verify | Any "fix it on my machine" distractor |
+| Instance fix vs source fix (copy a teammate's `~/.claude.json` vs repo `.mcp.json`) | 2.4 Q1 half (9 Sep); closed in 3.1 MCQ + Build 2 live; **reopened 15 Sep in schema costume** — fixed an unknown enum type by adding one more enum value instead of `other` + freeform detail | **OPEN — third costume** | An enum/schema stem: unknown category arrives; the bait is "add it to the enum" |
 | **Empty-vs-error** — in the *timeout* costume (`[]`+ok is the do-not-retry signal) and in the *code* costume (`{"customer": None}` has no `isError` → `is_error` False) | D2 practice pass; **inverted once** 13 Sep (parallel session), corrected twice same day; **wrong again 14 Sep** in Build 1's code walkthrough (said `is_error` True for a valid-empty lookup, cited a gate line) | **OPEN — three costumes** | Turn-2 retry also times out: findings count + Coverage line, with and without partials; plus a code item: given a tool return value, what does line `is_error: bool(output.get("isError"))` produce |
 
 ## Domain 3 — Claude Code (20%)
@@ -45,12 +45,12 @@ you back to the task file named in the row.
 |---|---|---|---|
 | **Fork direction** — fork protects the *parent's* window from the skill's working, not the skill from the parent | 3.2 Q2, three rounds (12 Sep); D3 gate R1 first instinct "A" (13 Sep) | **QUEUED step 28** | Wrong option = "fork gives the skill a clean context so the parent cannot bias it" |
 | Where-without-why — right path, no reason (travels-on-clone) | step 7 lineage; 3.1 Q1 (11 Sep); passed D3 gate path-right-reason-differs | VERIFY | Two options with the same path, only the reason differs |
-| **Undersized why** — names one property when the stem needs the discriminating one | 3.3, 3.5 MCQs, 3.6 Q1 half (12 Sep); ex-4 gap-check 2 of 4 (13 Sep) | **OPEN habit** | Every bonus MCQ: "which distractor does my why fail to kill?" |
+| **Undersized why** — names one property when the stem needs the discriminating one | 3.3, 3.5 MCQs, 3.6 Q1 half (12 Sep); ex-4 gap-check 2 of 4 (13 Sep); 4.1 MCQ + 4.3 Q2 (15 Sep) — but 4.4–4.6 all properly sized, 4.6 MCQ with four separate autopsies: trending towards closed | **OPEN habit** | Every bonus MCQ: "which distractor does my why fail to kill?" |
 | Batches vs per-PR latency (nobody waiting → 24 h window free → 50%) | 3.6 Q1 why half-sized; D3 gate retest pass | VERIFY | Two CI jobs, one blocked developer |
 | **Cost mechanics** — turns and *input* dominate, not output length (incremental review re-verifies, not re-discovers) | exercise 2 gap-check 5b miss, 5c half (14 Sep) | **OPEN** | Two runs, same diff, one with prior findings: explain the cost ratio |
 | Structured failure in CI — exit-code capture, not just a message (2.2 shape) | exercise 2 gap-check 4b half (14 Sep) | VERIFY | A `set -e` script that dies silently: name both fixes |
 
-## Domain 4 — Prompt engineering (20%) — *files not yet opened; these are pre-existing gaps*
+## Domain 4 — Prompt engineering (20%)
 
 | Weak spot | Where it showed | Status | Recheck as |
 |---|---|---|---|
@@ -61,6 +61,8 @@ you back to the task file named in the row.
 | Single cache breakpoint = one span; `read=0` symptom | ex-36 Q3 half (7 Sep) | QUEUED step 28 (breakpoint placement) | Usage numbers → where the breakpoint is |
 | Haiku's silent 4096 `max_tokens` minimum | ex-36 Q4 FAIL, R1 micro-retest pass (7 Sep) | VERIFY | Truncated output, no error — which parameter |
 | **Reciting notes instead of executing the scenario** | ex-36 Q4 (7 Sep), named habit | **OPEN habit** | Any scenario item: demand the trace, not the definition |
+| **Generalise** = apply the learned rule to a case not in the examples (read as "be vague"; inverted — said reasoning makes the model generalise *less*) | 4.2 Q2 FAIL (15 Sep), vocabulary + mechanism | VERIFY | Few-shot with vs without reasoning lines: what does each buy on a layout not in the examples |
+| Required field on a sparse source — the schema contract makes invention the only *legal* output (nullable = absence expressible) | 4.3 Q2 half — headline without the mechanism; chain taught, mechanism then run correctly in the micro-retest (15 Sep) | VERIFY | Blank box + required field + forced tool call: walk what the model can legally emit |
 
 ## Domain 5 — Context & reliability (15%)
 
@@ -85,7 +87,7 @@ you back to the task file named in the row.
 5. **Arithmetic not volunteered** → compute it, show it.
 6. **One committed letter** — "B - A" (9 Sep) and "A then C" (13 Sep) are both ambiguous on paper.
 7. **Attempts first** — asking for the answers (7 Sep legacy Q4/Q5; 13 Sep parallel session Q2–4) scores as not passed.
-8. **Vocabulary** — say so the moment a term is unclear ("harness", 14 Sep); a missed word looks like a missed concept.
+8. **Vocabulary** — say so the moment a term is unclear ("harness", 14 Sep; "generalise", 15 Sep); a missed word looks like a missed concept.
 
 ## Step-28 mixed-set queue (already booked)
 
