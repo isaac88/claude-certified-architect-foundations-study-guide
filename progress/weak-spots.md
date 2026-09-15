@@ -54,12 +54,12 @@ you back to the task file named in the row.
 
 | Weak spot | Where it showed | Status | Recheck as |
 |---|---|---|---|
-| What scoring **bands** buy the metric ("what buys resolution") | legacy eval-block Q4 (1 Sep → 7 Sep) | OPEN — expected to fail first pass at D4 practice | Eval design stem with a 1–10 vs pass/fail choice |
-| Score vs **delta**, wrong criterion / Goodhart | legacy eval Q3 half (7 Sep) | VERIFY | "Score went up, product got worse" |
-| Ship with/without the one-shot example; delta vs noise | legacy eval Q5 (7 Sep) | VERIFY | Two prompt versions, small delta, noisy grader |
-| `content[0].text` with thinking enabled → `AttributeError` (mechanism under scenario) | ex-32 Q1 half (7 Sep) | VERIFY | Scenario, not recital: what crashes and why |
+| What scoring **bands** buy the metric ("what buys resolution") | legacy eval-block Q4 (1 Sep → 7 Sep); **passed cold at D4 gate R1 (15 Sep)** — resolution mechanism unprompted, against the expected-fail prediction | VERIFY | Eval design stem with a 1–10 vs pass/fail choice |
+| Score vs **delta**, wrong criterion / Goodhart | legacy eval Q3 half (7 Sep); passed cold D4 gate R2 (15 Sep) — "rewards presence, not validity" | CLOSED | — |
+| Ship with/without the one-shot example; delta vs noise | legacy eval Q5 (7 Sep); passed cold D4 gate R3 (15 Sep) with the arithmetic volunteered | CLOSED | — |
+| `content[0].text` with thinking enabled → `AttributeError` (mechanism under scenario) | ex-32 Q1 half (7 Sep); passed cold D4 gate R4 (15 Sep) — fixed-index reliance named | CLOSED | — |
 | Single cache breakpoint = one span; `read=0` symptom | ex-36 Q3 half (7 Sep) | QUEUED step 28 (breakpoint placement) | Usage numbers → where the breakpoint is |
-| Haiku's silent 4096 `max_tokens` minimum | ex-36 Q4 FAIL, R1 micro-retest pass (7 Sep) | VERIFY | Truncated output, no error — which parameter |
+| Haiku's silent 4096-token **caching** minimum | ex-36 Q4 FAIL, R1 micro-retest pass (7 Sep); D4 gate R5 (15 Sep) right letter, why restated the option | VERIFY | Which `usage` field separates below-minimum (never written) from TTL-expired (rewritten every request) |
 | **Reciting notes instead of executing the scenario** | ex-36 Q4 (7 Sep), named habit | **OPEN habit** | Any scenario item: demand the trace, not the definition |
 | **Generalise** = apply the learned rule to a case not in the examples (read as "be vague"; inverted — said reasoning makes the model generalise *less*) | 4.2 Q2 FAIL (15 Sep), vocabulary + mechanism | VERIFY | Few-shot with vs without reasoning lines: what does each buy on a layout not in the examples |
 | Required field on a sparse source — the schema contract makes invention the only *legal* output (nullable = absence expressible) | 4.3 Q2 half — headline without the mechanism; chain taught, mechanism then run correctly in the micro-retest (15 Sep) | VERIFY | Blank box + required field + forced tool call: walk what the model can legally emit |

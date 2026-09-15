@@ -51,7 +51,7 @@ Source: Anthropic Academy → Prepare for this exam. Details: [docs/academy-cour
 - [x] 21. Domain 3 practice: **8 / 8** (target 7+) — 13 Sep 2026, options reshuffled (key C,A,D,B,A,C,D,B). Retests: path-right-reason-differs, always-enforced-vs-always-loaded, batches-vs-per-PR all clean; fork-direction credited on the final letter but the first instinct was the inversion — retest cold again at step 28
 - [x] 22. Exercise 2 — Claude Code team workflow — 13 Sep 2026, with course G Build 3: project + directory CLAUDE.md, `.claude/rules/` (tests, api), `/review`, `claude -p` review script + schema + GitHub Actions workflow; hang reproduced (trust dialog under a PTY), incremental review verified live (3 resolved findings not repeated). Actions run itself awaits the `ANTHROPIC_API_KEY` repo secret — see [academy/course-g-claude-code/README.md](academy/course-g-claude-code/README.md)
 - [x] 23. Domain 4 files 4.1–4.6 — 15 Sep 2026 (4.1–4.2 in the late-night sitting; 4.3–4.6 in one sitting later the same day). All six bonus MCQs correct; from 4.4 on, every why properly sized with full distractor autopsies — the undersized-why habit did not fire once in 4.4–4.6
-- [ ] 24. Domain 4 practice: ___ / 8 (target 7+)
+- [x] 24. Domain 4 practice: **8 / 8** (target 7+) — 15 Sep 2026, same sitting as 4.3–4.6, options reshuffled (key D,B,A,C,B,D,A,C); +5/5 on retest items with whys: eval bands (the ledger's expected-fail row) passed with the resolution mechanism unprompted; score-vs-delta, ship-vs-noise and `content[0].text`-with-thinking closed; Haiku 4096 minimum right letter but why undersized — one probe outstanding
 - [ ] 25. Exercise 3 — extraction pipeline
 
 ## Phase 4 — Lock together
