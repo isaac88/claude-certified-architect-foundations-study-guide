@@ -1,5 +1,7 @@
 # Exercise 1, hardened — support agent with hooks (course G Build 1, step 19)
 
+> ⚠️ **Spoiler — worked solution.** Attempt the brief in [docs/exercises.md](../../docs/exercises.md) first.
+
 Exercise 22/23's agentic loop, unchanged, wrapped with the two lifecycle hooks
 from Domain 1.5 and the structured-error contract from 2.2. Spec:
 [docs/exercises.md #1](../../docs/exercises.md). Paired Claude Code hook:

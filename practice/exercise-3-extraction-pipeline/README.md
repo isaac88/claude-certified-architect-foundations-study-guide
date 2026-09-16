@@ -1,5 +1,7 @@
 # Exercise 3 — structured extraction pipeline (Domain 4 lab)
 
+> ⚠️ **Spoiler — worked solution.** Attempt the brief in [docs/exercises.md](../../docs/exercises.md) first.
+
 Ten invented supplier documents in ten layouts, and the six points of the
 brief in [docs/exercises.md #3](../../docs/exercises.md) each measured rather
 than asserted: a JSON-Schema extraction tool (4.3), forced `tool_choice`
