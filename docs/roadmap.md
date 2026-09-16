@@ -1,6 +1,6 @@
 # Roadmap — course C and the domains, interleaved
 
-Written 31 Aug 2026, from the real position: course C finished through *Structured data exercise*, domain step 6 not yet done.
+First drafted mid-journey; the phases below work from a cold start — begin at Phase A, pairing course C's opening sections with Domain 1.
 
 This is the **execution order**. [study-steps.md](study-steps.md) still owns the numbering that [../progress.md](../progress.md) ticks; this file says what to do on which day and what to pair it with.
 

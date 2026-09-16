@@ -1,4 +1,4 @@
-# Anti-patterns the exam tests
+# 🚫 Anti-patterns the exam tests
 
 If an option looks like one of these, it is almost certainly wrong.
 

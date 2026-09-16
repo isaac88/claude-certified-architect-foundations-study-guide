@@ -1,5 +1,7 @@
 # Exercise 4 — multi-agent research pipeline (Domain 5 lab)
 
+> ⚠️ **Spoiler — worked solution.** Attempt the brief in [docs/exercises.md](../../docs/exercises.md) first.
+
 Coordinator plus three spokes over a synthetic corpus, exercising the five
 points of the brief in [docs/exercises.md #4](../../docs/exercises.md):
 persistent case facts (5.1), explicit context passing with claim–source

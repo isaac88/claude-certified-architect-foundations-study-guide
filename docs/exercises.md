@@ -1,6 +1,8 @@
 # Hands-on exercises
 
-These four builds match the public preparation guidance. You do not need to commit code here; keep experiments in a sibling folder if you prefer.
+These builds match the public preparation guidance. You do not need to commit code here; keep experiments in a sibling folder if you prefer.
+
+> The author's worked solutions live in [practice/](../practice/) (spoilers — attempt the brief first). Exercise 2 has no folder there: its artefacts are this repo's own `.claude/` and `.github/` configuration.
 
 ## 1. Multi-tool support agent
 

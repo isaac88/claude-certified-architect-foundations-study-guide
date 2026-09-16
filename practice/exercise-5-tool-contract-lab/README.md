@@ -1,5 +1,7 @@
 # Exercise 5 — Domain 2 tool contract lab
 
+> ⚠️ **Spoiler — worked solution.** Attempt the brief in [docs/exercises.md](../../docs/exercises.md) first.
+
 Working MCP server + client loop that exercises the Domain 2 contracts:
 tool descriptions as routing (2.1), structured error categories (2.2),
 valid-empty vs access-failure (2.2), MCP registration with `${ENV_VAR}`

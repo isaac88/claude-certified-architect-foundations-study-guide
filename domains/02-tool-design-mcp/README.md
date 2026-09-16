@@ -1,4 +1,4 @@
-# Domain 2 — Tool Design & MCP Integration (18%)
+# 🔧 Domain 2 — Tool Design & MCP Integration (18%)
 
 Tools are how Claude acts. If selection is wrong, errors are mute, or eighteen tools sit on one agent, the exam will not let you blame “the model”.
 

@@ -1,5 +1,7 @@
 # Course G — Claude Code in Action: hands-on builds
 
+> The author's verification log for course G — read it as a worked example; your own sitting and builds replace these results.
+
 Course G was sat in one go (final quiz 8/8, 11 Sep 2026) with no hands-on during the
 sitting. The builds land here afterwards, each paired with the Domain 3 file it belongs
 to, per the agreed build map.
