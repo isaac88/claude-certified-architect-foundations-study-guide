@@ -1,0 +1,5217 @@
+{
+  "model": "claude-haiku-4-5",
+  "run_at": "2026-09-16T14:08:22+00:00",
+  "usage": {
+    "input": 79342,
+    "output": 15315,
+    "calls": 38
+  },
+  "stage1_prose": {
+    "rows": [
+      {
+        "id": "inv-01",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"invoice\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "NG-4471",
+          "issue_date": "2025-01-14",
+          "vendor_name": "NORTHGATE SUPPLIES LTD",
+          "vendor_tax_id": "GB 418 2290 11",
+          "po_number": "PO-88213",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Oak veneer sheet 2440x1220",
+              "quantity": 6,
+              "unit_price": 48.0,
+              "amount": 288.0
+            },
+            {
+              "description": "Birch ply 18mm",
+              "quantity": 4,
+              "unit_price": 31.5,
+              "amount": 126.0
+            },
+            {
+              "description": "Delivery",
+              "quantity": 1,
+              "unit_price": 35.0,
+              "amount": 35.0
+            }
+          ],
+          "subtotal": 449.0,
+          "tax_amount": 89.8,
+          "stated_total": 538.8,
+          "calculated_total": 538.8,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        }
+      },
+      {
+        "id": "inv-02",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"invoice\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "BF/2024/0912",
+          "issue_date": "2024-12-31",
+          "vendor_name": "BLUEFORGE METALS",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Stainless rod 316 12mm",
+              "quantity": 20,
+              "unit_rate": 9.4,
+              "line_total": 188.0
+            },
+            {
+              "description": "Cutting charge",
+              "quantity": 1,
+              "unit_rate": 24.0,
+              "line_total": 24.0
+            },
+            {
+              "description": "Carriage",
+              "quantity": 1,
+              "unit_rate": 18.5,
+              "line_total": 18.5
+            }
+          ],
+          "subtotal": 230.5,
+          "tax_amount": 0.0,
+          "stated_total": 230.5,
+          "calculated_total": 230.5,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        }
+      },
+      {
+        "id": "inv-03",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"invoice\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "INV-2025-0033",
+          "issue_date": "2025-03-05",
+          "vendor_name": "Harlow & Finch Consulting",
+          "vendor_tax_id": null,
+          "po_number": "4409-DRG",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Discovery workshop (2 days)",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 1600.0
+            },
+            {
+              "description": "Interview transcription",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 240.0
+            },
+            {
+              "description": "Report production",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 2020.0,
+          "tax_amount": 404.0,
+          "stated_total": 2484.0,
+          "calculated_total": 2424.0,
+          "conflict_detected": true,
+          "conflict_note": "Stated total 2484.00 does not match calculated total (subtotal 2020.00 + tax 404.00 = 2424.00). Discrepancy of 60.00.",
+          "payment_status": "unpaid"
+        }
+      },
+      {
+        "id": "rcp-04",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"receipt\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": "Order confirmation and payment receipt",
+          "document_id": "BR-99118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "Bramble Roast Coffee",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Ethiopia Guji 250g",
+              "quantity": 2,
+              "unit_price": 9.5,
+              "line_total": 19.0
+            },
+            {
+              "description": "Colombia Huila 1kg",
+              "quantity": 1,
+              "unit_price": 26.5,
+              "line_total": 26.5
+            },
+            {
+              "description": "Shipping",
+              "quantity": 1,
+              "unit_price": 3.95,
+              "line_total": 3.95
+            }
+          ],
+          "subtotal": 49.45,
+          "tax_amount": null,
+          "stated_total": 49.45,
+          "calculated_total": 49.45,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        }
+      },
+      {
+        "id": "scan-05",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"invoice\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "MF-7102",
+          "issue_date": "2025-04-09",
+          "vendor_name": "MERIDIAN FASTENERS",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "M8 hex bolt zinc",
+              "quantity": 500,
+              "unit_price": 0.25,
+              "line_total": 125.0
+            },
+            {
+              "description": "Nyloc nut M8",
+              "quantity": 500,
+              "unit_price": 0.125,
+              "line_total": 62.5
+            },
+            {
+              "description": "Washer form A M8",
+              "quantity": 500,
+              "unit_price": 0.042,
+              "line_total": 21.0
+            }
+          ],
+          "subtotal": 208.5,
+          "tax_amount": 41.7,
+          "stated_total": 250.2,
+          "calculated_total": 250.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        }
+      },
+      {
+        "id": "oth-06",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"other\",\\n  \"document_type_detai",
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "delivery_note",
+          "document_id": "DN-55120",
+          "issue_date": "2025-01-22",
+          "vendor_name": "Ashby Logistics",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "unclear",
+          "line_items": [
+            {
+              "description": "pallet, malt (25kg sacks x40)",
+              "quantity": 4,
+              "unit": "pallet",
+              "unit_price": null,
+              "line_total": null
+            },
+            {
+              "description": "pallet, hops (vacuum packed)",
+              "quantity": 1,
+              "unit": "pallet",
+              "unit_price": null,
+              "line_total": null
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": null,
+          "calculated_total": null,
+          "conflict_detected": false,
+          "conflict_note": "This is a delivery note with no charges. Goods are invoiced separately under INV-KB-3390.",
+          "payment_status": "unclear"
+        }
+      },
+      {
+        "id": "cn-07",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"credit_note\",\\n  \"document_type",
+        "record": {
+          "document_type": "credit_note",
+          "document_type_detail": null,
+          "document_id": "CN-2025-018",
+          "issue_date": "2025-02-02",
+          "vendor_name": "VALE PACKAGING LTD",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Return: 3 x carton 300x200x150 @ 4.20",
+              "quantity": 3,
+              "unit_price": 4.2,
+              "amount": -12.6
+            },
+            {
+              "description": "Return: 1 x tape roll (damaged)",
+              "quantity": 1,
+              "unit_price": null,
+              "amount": -3.1
+            },
+            {
+              "description": "Restocking fee",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 2.0
+            }
+          ],
+          "subtotal": -15.7,
+          "tax_amount": null,
+          "stated_total": -13.7,
+          "calculated_total": -13.7,
+          "conflict_detected": true,
+          "conflict_note": "Line items sum to -15.70 but stated credit total is -13.70. Difference of 2.00 (matches restocking fee amount).",
+          "payment_status": "unclear"
+        }
+      },
+      {
+        "id": "inv-08",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"invoice\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": "Faktura",
+          "document_id": "SL-0291",
+          "issue_date": "2025-05-20",
+          "vendor_name": "Studio Lindqvist AB",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "EUR",
+          "line_items": [
+            {
+              "description": "Concept development, 12 h",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 960.0
+            },
+            {
+              "description": "Revision round",
+              "quantity": null,
+              "unit_price": null,
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 1140.0,
+          "tax_amount": 0.0,
+          "stated_total": 1140.0,
+          "calculated_total": 1140.0,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        }
+      },
+      {
+        "id": "rcp-09",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"receipt\",\\n  \"document_type_det",
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": "Caf\u00e9 receipt",
+          "document_id": "0074-118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "The Old Forge Cafe",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Flat white",
+              "quantity": 1,
+              "unit_price": 3.4,
+              "line_total": 3.4
+            },
+            {
+              "description": "Sourdough toast",
+              "quantity": 1,
+              "unit_price": 5.2,
+              "line_total": 5.2
+            },
+            {
+              "description": "Jam (extra)",
+              "quantity": 1,
+              "unit_price": 0.6,
+              "line_total": 0.6
+            }
+          ],
+          "subtotal": 9.2,
+          "tax_amount": null,
+          "stated_total": 9.2,
+          "calculated_total": 9.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        }
+      },
+      {
+        "id": "oth-10",
+        "parsed_strict": false,
+        "parsed_after_repair": true,
+        "missing_fields": [],
+        "bad_enums": [],
+        "raw_prefix": "```json\\n{\\n  \"document_type\": \"other\",\\n  \"document_type_detai",
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "bank statement extract",
+          "document_id": "20-44-19 / 30119827",
+          "issue_date": "2025-04-30",
+          "vendor_name": null,
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "date": "2025-04-04",
+              "description": "CARD PAYMENT NORTHGATE SUPPLIES",
+              "amount": -538.8
+            },
+            {
+              "date": "2025-04-11",
+              "description": "TRANSFER IN DENTON RAIL GROUP",
+              "amount": 2484.0
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": 4915.6,
+          "calculated_total": null,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        }
+      }
+    ],
+    "parsed_strict": 0,
+    "parsed_after_repair": 10,
+    "conforming": 10
+  },
+  "stage2_auto": {
+    "rows": [
+      {
+        "id": "inv-01",
+        "called_tool": true,
+        "stop_reason": "tool_use",
+        "prose": ""
+      },
+      {
+        "id": "inv-02",
+        "called_tool": true,
+        "stop_reason": "tool_use",
+        "prose": "I'll record this invoice from Blueforge Metals into the accounts-payable ledger."
+      },
+      {
+        "id": "inv-03",
+        "called_tool": true,
+        "stop_reason": "tool_use",
+        "prose": "I'll record this invoice into the accounts-payable ledger."
+      }
+    ],
+    "called_tool": 3,
+    "of": 3
+  },
+  "stage3_zero_shot": {
+    "traces": {
+      "inv-01": {
+        "id": "inv-01",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "NG-4471",
+              "issue_date": "2025-01-14",
+              "vendor_name": "Northgate Supplies Ltd",
+              "vendor_tax_id": "GB 418 2290 11",
+              "po_number": "PO-88213",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Oak veneer sheet 2440x1220",
+                  "amount": 288.0
+                },
+                {
+                  "description": "Birch ply 18mm",
+                  "amount": 126.0
+                },
+                {
+                  "description": "Delivery",
+                  "amount": 35.0
+                }
+              ],
+              "subtotal": 449.0,
+              "tax_amount": 89.8,
+              "stated_total": 538.8,
+              "calculated_total": 538.8,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "NG-4471",
+          "issue_date": "2025-01-14",
+          "vendor_name": "Northgate Supplies Ltd",
+          "vendor_tax_id": "GB 418 2290 11",
+          "po_number": "PO-88213",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Oak veneer sheet 2440x1220",
+              "amount": 288.0
+            },
+            {
+              "description": "Birch ply 18mm",
+              "amount": 126.0
+            },
+            {
+              "description": "Delivery",
+              "amount": 35.0
+            }
+          ],
+          "subtotal": 449.0,
+          "tax_amount": 89.8,
+          "stated_total": 538.8,
+          "calculated_total": 538.8,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-02": {
+        "id": "inv-02",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "BF/2024/0912",
+              "issue_date": "2024-12-31",
+              "vendor_name": "BLUEFORGE METALS",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Stainless rod 316 12mm",
+                  "amount": 188.0
+                },
+                {
+                  "description": "Cutting charge",
+                  "amount": 24.0
+                },
+                {
+                  "description": "Carriage",
+                  "amount": 18.5
+                }
+              ],
+              "subtotal": 230.5,
+              "tax_amount": 0.0,
+              "stated_total": 230.5,
+              "calculated_total": 230.5,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "BF/2024/0912",
+          "issue_date": "2024-12-31",
+          "vendor_name": "BLUEFORGE METALS",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Stainless rod 316 12mm",
+              "amount": 188.0
+            },
+            {
+              "description": "Cutting charge",
+              "amount": 24.0
+            },
+            {
+              "description": "Carriage",
+              "amount": 18.5
+            }
+          ],
+          "subtotal": 230.5,
+          "tax_amount": 0.0,
+          "stated_total": 230.5,
+          "calculated_total": 230.5,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-03": {
+        "id": "inv-03",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "INV-2025-0033",
+              "issue_date": "2025-03-05",
+              "vendor_name": "Harlow & Finch Consulting",
+              "vendor_tax_id": null,
+              "po_number": "4409-DRG",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Discovery workshop (2 days)",
+                  "amount": 1600.0
+                },
+                {
+                  "description": "Interview transcription",
+                  "amount": 240.0
+                },
+                {
+                  "description": "Report production",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 2020.0,
+              "tax_amount": 404.0,
+              "stated_total": 2484.0,
+              "calculated_total": 2424.0,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": [
+              {
+                "field": "conflict_detected",
+                "expected": "true - stated 2484.0 vs computed 2424.0",
+                "actual": false,
+                "detected_pattern": "unflagged_total_mismatch"
+              }
+            ]
+          },
+          {
+            "attempt": 1,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "INV-2025-0033",
+              "issue_date": "2025-03-05",
+              "vendor_name": "Harlow & Finch Consulting",
+              "vendor_tax_id": null,
+              "po_number": "4409-DRG",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Discovery workshop (2 days)",
+                  "amount": 1600.0
+                },
+                {
+                  "description": "Interview transcription",
+                  "amount": 240.0
+                },
+                {
+                  "description": "Report production",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 2020.0,
+              "tax_amount": 404.0,
+              "stated_total": 2484.0,
+              "calculated_total": 2424.0,
+              "conflict_detected": true,
+              "conflict_note": "Stated total 2484.00 does not equal calculated total of subtotal 2020.00 plus tax 404.00.",
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "INV-2025-0033",
+          "issue_date": "2025-03-05",
+          "vendor_name": "Harlow & Finch Consulting",
+          "vendor_tax_id": null,
+          "po_number": "4409-DRG",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Discovery workshop (2 days)",
+              "amount": 1600.0
+            },
+            {
+              "description": "Interview transcription",
+              "amount": 240.0
+            },
+            {
+              "description": "Report production",
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 2020.0,
+          "tax_amount": 404.0,
+          "stated_total": 2484.0,
+          "calculated_total": 2424.0,
+          "conflict_detected": true,
+          "conflict_note": "Stated total 2484.00 does not equal calculated total of subtotal 2020.00 plus tax 404.00.",
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "rcp-04": {
+        "id": "rcp-04",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "receipt",
+              "document_type_detail": null,
+              "document_id": "BR-99118",
+              "issue_date": "2024-12-03",
+              "vendor_name": "Bramble Roast Coffee",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "2 x Ethiopia Guji 250g",
+                  "amount": 19.0
+                },
+                {
+                  "description": "1 x Colombia Huila 1kg",
+                  "amount": 26.5
+                },
+                {
+                  "description": "Shipping",
+                  "amount": 3.95
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": 49.45,
+              "calculated_total": 49.45,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "paid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": null,
+          "document_id": "BR-99118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "Bramble Roast Coffee",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "2 x Ethiopia Guji 250g",
+              "amount": 19.0
+            },
+            {
+              "description": "1 x Colombia Huila 1kg",
+              "amount": 26.5
+            },
+            {
+              "description": "Shipping",
+              "amount": 3.95
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": 49.45,
+          "calculated_total": 49.45,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        },
+        "stopped_unfixable": false
+      },
+      "scan-05": {
+        "id": "scan-05",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "MF-7102",
+              "issue_date": "2025-04-09",
+              "vendor_name": "Meridian Fasteners",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "M8 hex bolt zinc x500",
+                  "amount": 125.0
+                },
+                {
+                  "description": "Nyloc nut M8 x500",
+                  "amount": 62.5
+                },
+                {
+                  "description": "Washer form A M8 x500",
+                  "amount": 21.0
+                }
+              ],
+              "subtotal": 208.5,
+              "tax_amount": 41.7,
+              "stated_total": 250.2,
+              "calculated_total": 250.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "MF-7102",
+          "issue_date": "2025-04-09",
+          "vendor_name": "Meridian Fasteners",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "M8 hex bolt zinc x500",
+              "amount": 125.0
+            },
+            {
+              "description": "Nyloc nut M8 x500",
+              "amount": 62.5
+            },
+            {
+              "description": "Washer form A M8 x500",
+              "amount": 21.0
+            }
+          ],
+          "subtotal": 208.5,
+          "tax_amount": 41.7,
+          "stated_total": 250.2,
+          "calculated_total": 250.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "oth-06": {
+        "id": "oth-06",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "other",
+              "document_type_detail": "delivery note",
+              "document_id": "DN-55120",
+              "issue_date": "2025-01-22",
+              "vendor_name": "Ashby Logistics",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "unclear",
+              "line_items": [],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": null,
+              "calculated_total": null,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "delivery note",
+          "document_id": "DN-55120",
+          "issue_date": "2025-01-22",
+          "vendor_name": "Ashby Logistics",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "unclear",
+          "line_items": [],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": null,
+          "calculated_total": null,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      },
+      "cn-07": {
+        "id": "cn-07",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "credit_note",
+              "document_type_detail": null,
+              "document_id": "CN-2025-018",
+              "issue_date": "2025-02-02",
+              "vendor_name": "Vale Packaging Ltd",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Return: 3 x carton 300x200x150 @ 4.20",
+                  "amount": -12.6
+                },
+                {
+                  "description": "Return: 1 x tape roll (damaged)",
+                  "amount": -3.1
+                },
+                {
+                  "description": "Restocking fee",
+                  "amount": 2.0
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": -13.7,
+              "calculated_total": -13.7,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "credit_note",
+          "document_type_detail": null,
+          "document_id": "CN-2025-018",
+          "issue_date": "2025-02-02",
+          "vendor_name": "Vale Packaging Ltd",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Return: 3 x carton 300x200x150 @ 4.20",
+              "amount": -12.6
+            },
+            {
+              "description": "Return: 1 x tape roll (damaged)",
+              "amount": -3.1
+            },
+            {
+              "description": "Restocking fee",
+              "amount": 2.0
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": -13.7,
+          "calculated_total": -13.7,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-08": {
+        "id": "inv-08",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "SL-0291",
+              "issue_date": "2025-05-20",
+              "vendor_name": "Studio Lindqvist AB",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "EUR",
+              "line_items": [
+                {
+                  "description": "Concept development, 12 h",
+                  "amount": 960.0
+                },
+                {
+                  "description": "Revision round",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 1140.0,
+              "tax_amount": 0,
+              "stated_total": 1140.0,
+              "calculated_total": 1140.0,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "SL-0291",
+          "issue_date": "2025-05-20",
+          "vendor_name": "Studio Lindqvist AB",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "EUR",
+          "line_items": [
+            {
+              "description": "Concept development, 12 h",
+              "amount": 960.0
+            },
+            {
+              "description": "Revision round",
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 1140.0,
+          "tax_amount": 0,
+          "stated_total": 1140.0,
+          "calculated_total": 1140.0,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "rcp-09": {
+        "id": "rcp-09",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "receipt",
+              "document_type_detail": null,
+              "document_id": "0074-118",
+              "issue_date": "2024-12-03",
+              "vendor_name": "The Old Forge Cafe",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Flat white",
+                  "amount": 3.4
+                },
+                {
+                  "description": "Sourdough toast",
+                  "amount": 5.2
+                },
+                {
+                  "description": "Jam (extra)",
+                  "amount": 0.6
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": 9.2,
+              "calculated_total": 9.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "paid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": null,
+          "document_id": "0074-118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "The Old Forge Cafe",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Flat white",
+              "amount": 3.4
+            },
+            {
+              "description": "Sourdough toast",
+              "amount": 5.2
+            },
+            {
+              "description": "Jam (extra)",
+              "amount": 0.6
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": 9.2,
+          "calculated_total": 9.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        },
+        "stopped_unfixable": false
+      },
+      "oth-10": {
+        "id": "oth-10",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "other",
+              "document_type_detail": "bank statement extract",
+              "document_id": "20-44-19 / 30119827",
+              "issue_date": "2025-04-30",
+              "vendor_name": "Calder Bank",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Card payment to Northgate Supplies",
+                  "amount": -538.8
+                },
+                {
+                  "description": "Transfer in from Denton Rail Group",
+                  "amount": 2484.0
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": null,
+              "calculated_total": 1945.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "bank statement extract",
+          "document_id": "20-44-19 / 30119827",
+          "issue_date": "2025-04-30",
+          "vendor_name": "Calder Bank",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Card payment to Northgate Supplies",
+              "amount": -538.8
+            },
+            {
+              "description": "Transfer in from Denton Rail Group",
+              "amount": 2484.0
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": null,
+          "calculated_total": 1945.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      }
+    },
+    "score_first_pass": {
+      "per_doc": {
+        "inv-01": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "NG-4471",
+              "want": "NG-4471"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-14",
+              "want": "2025-01-14"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Northgate Supplies Ltd",
+              "want": "Northgate Supplies Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": "GB 418 2290 11",
+              "want": "GB 418 2290 11"
+            },
+            "po_number": {
+              "ok": true,
+              "got": "PO-88213",
+              "want": "PO-88213"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 538.8,
+              "want": 538.8
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-02": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BF/2024/0912",
+              "want": "BF/2024/0912"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-31",
+              "want": "2024-12-31"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "BLUEFORGE METALS",
+              "want": "Blueforge Metals"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 230.5,
+              "want": 230.5
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-03": {
+          "covered_by_example": false,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "INV-2025-0033",
+              "want": "INV-2025-0033"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-03-05",
+              "want": "2025-03-05"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Harlow & Finch Consulting",
+              "want": "Harlow & Finch Consulting"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": "4409-DRG",
+              "want": "4409-DRG"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 2484.0,
+              "want": 2484.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": false,
+              "got": false,
+              "want": true
+            }
+          }
+        },
+        "rcp-04": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BR-99118",
+              "want": "BR-99118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Bramble Roast Coffee",
+              "want": "Bramble Roast Coffee"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 49.45,
+              "want": 49.45
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "scan-05": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "MF-7102",
+              "want": "MF-7102"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-04-09",
+              "want": "2025-04-09"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Meridian Fasteners",
+              "want": "Meridian Fasteners"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 250.2,
+              "want": 250.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-06": {
+          "covered_by_example": true,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "DN-55120",
+              "want": "DN-55120"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-22",
+              "want": "2025-01-22"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Ashby Logistics",
+              "want": "Ashby Logistics"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "line_item_count": {
+              "ok": false,
+              "got": 0,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "cn-07": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "credit_note",
+              "want": "credit_note"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "CN-2025-018",
+              "want": "CN-2025-018"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-02-02",
+              "want": "2025-02-02"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Vale Packaging Ltd",
+              "want": "Vale Packaging Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": -13.7,
+              "want": -13.7
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-08": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "SL-0291",
+              "want": "SL-0291"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-05-20",
+              "want": "2025-05-20"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Studio Lindqvist AB",
+              "want": "Studio Lindqvist AB"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "EUR",
+              "want": "EUR"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 1140.0,
+              "want": 1140.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "rcp-09": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "0074-118",
+              "want": "0074-118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "The Old Forge Cafe",
+              "want": "The Old Forge Cafe"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 9.2,
+              "want": 9.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-10": {
+          "covered_by_example": false,
+          "correct": 9,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": false,
+              "got": "20-44-19 / 30119827",
+              "want": null
+            },
+            "issue_date": {
+              "ok": false,
+              "got": "2025-04-30",
+              "want": null
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Calder Bank",
+              "want": "Calder Bank"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        }
+      },
+      "overall": {
+        "correct": 106,
+        "of": 110,
+        "pct": 96.4
+      },
+      "layouts_an_example_covers": {
+        "correct": 32,
+        "of": 33,
+        "pct": 97.0
+      },
+      "layouts_no_example_covers": {
+        "correct": 74,
+        "of": 77,
+        "pct": 96.1
+      }
+    },
+    "score_final": {
+      "per_doc": {
+        "inv-01": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "NG-4471",
+              "want": "NG-4471"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-14",
+              "want": "2025-01-14"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Northgate Supplies Ltd",
+              "want": "Northgate Supplies Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": "GB 418 2290 11",
+              "want": "GB 418 2290 11"
+            },
+            "po_number": {
+              "ok": true,
+              "got": "PO-88213",
+              "want": "PO-88213"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 538.8,
+              "want": 538.8
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-02": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BF/2024/0912",
+              "want": "BF/2024/0912"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-31",
+              "want": "2024-12-31"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "BLUEFORGE METALS",
+              "want": "Blueforge Metals"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 230.5,
+              "want": 230.5
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-03": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "INV-2025-0033",
+              "want": "INV-2025-0033"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-03-05",
+              "want": "2025-03-05"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Harlow & Finch Consulting",
+              "want": "Harlow & Finch Consulting"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": "4409-DRG",
+              "want": "4409-DRG"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 2484.0,
+              "want": 2484.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": true,
+              "want": true
+            }
+          }
+        },
+        "rcp-04": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BR-99118",
+              "want": "BR-99118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Bramble Roast Coffee",
+              "want": "Bramble Roast Coffee"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 49.45,
+              "want": 49.45
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "scan-05": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "MF-7102",
+              "want": "MF-7102"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-04-09",
+              "want": "2025-04-09"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Meridian Fasteners",
+              "want": "Meridian Fasteners"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 250.2,
+              "want": 250.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-06": {
+          "covered_by_example": true,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "DN-55120",
+              "want": "DN-55120"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-22",
+              "want": "2025-01-22"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Ashby Logistics",
+              "want": "Ashby Logistics"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "line_item_count": {
+              "ok": false,
+              "got": 0,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "cn-07": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "credit_note",
+              "want": "credit_note"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "CN-2025-018",
+              "want": "CN-2025-018"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-02-02",
+              "want": "2025-02-02"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Vale Packaging Ltd",
+              "want": "Vale Packaging Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": -13.7,
+              "want": -13.7
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-08": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "SL-0291",
+              "want": "SL-0291"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-05-20",
+              "want": "2025-05-20"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Studio Lindqvist AB",
+              "want": "Studio Lindqvist AB"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "EUR",
+              "want": "EUR"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 1140.0,
+              "want": 1140.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "rcp-09": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "0074-118",
+              "want": "0074-118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "The Old Forge Cafe",
+              "want": "The Old Forge Cafe"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 9.2,
+              "want": 9.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-10": {
+          "covered_by_example": false,
+          "correct": 9,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": false,
+              "got": "20-44-19 / 30119827",
+              "want": null
+            },
+            "issue_date": {
+              "ok": false,
+              "got": "2025-04-30",
+              "want": null
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Calder Bank",
+              "want": "Calder Bank"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        }
+      },
+      "overall": {
+        "correct": 107,
+        "of": 110,
+        "pct": 97.3
+      },
+      "layouts_an_example_covers": {
+        "correct": 32,
+        "of": 33,
+        "pct": 97.0
+      },
+      "layouts_no_example_covers": {
+        "correct": 75,
+        "of": 77,
+        "pct": 97.4
+      }
+    },
+    "detected_patterns": {
+      "unflagged_total_mismatch": 1
+    },
+    "retries_used": 1,
+    "unresolved_after_retry": {}
+  },
+  "stage4_few_shot": {
+    "traces": {
+      "inv-01": {
+        "id": "inv-01",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "NG-4471",
+              "issue_date": "2025-01-14",
+              "vendor_name": "Northgate Supplies Ltd",
+              "vendor_tax_id": "GB 418 2290 11",
+              "po_number": "PO-88213",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Oak veneer sheet 2440x1220",
+                  "amount": 288.0
+                },
+                {
+                  "description": "Birch ply 18mm",
+                  "amount": 126.0
+                },
+                {
+                  "description": "Delivery",
+                  "amount": 35.0
+                }
+              ],
+              "subtotal": 449.0,
+              "tax_amount": 89.8,
+              "stated_total": 538.8,
+              "calculated_total": 538.8,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "NG-4471",
+          "issue_date": "2025-01-14",
+          "vendor_name": "Northgate Supplies Ltd",
+          "vendor_tax_id": "GB 418 2290 11",
+          "po_number": "PO-88213",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Oak veneer sheet 2440x1220",
+              "amount": 288.0
+            },
+            {
+              "description": "Birch ply 18mm",
+              "amount": 126.0
+            },
+            {
+              "description": "Delivery",
+              "amount": 35.0
+            }
+          ],
+          "subtotal": 449.0,
+          "tax_amount": 89.8,
+          "stated_total": 538.8,
+          "calculated_total": 538.8,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-02": {
+        "id": "inv-02",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "BF/2024/0912",
+              "issue_date": "2024-12-31",
+              "vendor_name": "Blueforge Metals",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Stainless rod 316 12mm",
+                  "amount": 188.0
+                },
+                {
+                  "description": "Cutting charge",
+                  "amount": 24.0
+                },
+                {
+                  "description": "Carriage",
+                  "amount": 18.5
+                }
+              ],
+              "subtotal": 230.5,
+              "tax_amount": 0.0,
+              "stated_total": 230.5,
+              "calculated_total": 230.5,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "BF/2024/0912",
+          "issue_date": "2024-12-31",
+          "vendor_name": "Blueforge Metals",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Stainless rod 316 12mm",
+              "amount": 188.0
+            },
+            {
+              "description": "Cutting charge",
+              "amount": 24.0
+            },
+            {
+              "description": "Carriage",
+              "amount": 18.5
+            }
+          ],
+          "subtotal": 230.5,
+          "tax_amount": 0.0,
+          "stated_total": 230.5,
+          "calculated_total": 230.5,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-03": {
+        "id": "inv-03",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "INV-2025-0033",
+              "issue_date": "2025-03-05",
+              "vendor_name": "Harlow & Finch Consulting",
+              "vendor_tax_id": null,
+              "po_number": "4409-DRG",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Discovery workshop (2 days)",
+                  "amount": 1600.0
+                },
+                {
+                  "description": "Interview transcription",
+                  "amount": 240.0
+                },
+                {
+                  "description": "Report production",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 2020.0,
+              "tax_amount": 404.0,
+              "stated_total": 2484.0,
+              "calculated_total": 2484.0,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": [
+              {
+                "field": "calculated_total",
+                "expected": "2424.0 (line items + tax_amount)",
+                "actual": 2484.0,
+                "detected_pattern": "calculated_total_wrong"
+              },
+              {
+                "field": "conflict_detected",
+                "expected": "true - stated 2484.0 vs computed 2424.0",
+                "actual": false,
+                "detected_pattern": "unflagged_total_mismatch"
+              }
+            ]
+          },
+          {
+            "attempt": 1,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "INV-2025-0033",
+              "issue_date": "2025-03-05",
+              "vendor_name": "Harlow & Finch Consulting",
+              "vendor_tax_id": null,
+              "po_number": "4409-DRG",
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Discovery workshop (2 days)",
+                  "amount": 1600.0
+                },
+                {
+                  "description": "Interview transcription",
+                  "amount": 240.0
+                },
+                {
+                  "description": "Report production",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 2020.0,
+              "tax_amount": 404.0,
+              "stated_total": 2484.0,
+              "calculated_total": 2424.0,
+              "conflict_detected": true,
+              "conflict_note": "Stated total 2484.00 does not equal calculated total 2424.00 (line items 2020.00 plus tax 404.00).",
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "INV-2025-0033",
+          "issue_date": "2025-03-05",
+          "vendor_name": "Harlow & Finch Consulting",
+          "vendor_tax_id": null,
+          "po_number": "4409-DRG",
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Discovery workshop (2 days)",
+              "amount": 1600.0
+            },
+            {
+              "description": "Interview transcription",
+              "amount": 240.0
+            },
+            {
+              "description": "Report production",
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 2020.0,
+          "tax_amount": 404.0,
+          "stated_total": 2484.0,
+          "calculated_total": 2424.0,
+          "conflict_detected": true,
+          "conflict_note": "Stated total 2484.00 does not equal calculated total 2424.00 (line items 2020.00 plus tax 404.00).",
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "rcp-04": {
+        "id": "rcp-04",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "receipt",
+              "document_type_detail": null,
+              "document_id": "BR-99118",
+              "issue_date": "2024-12-03",
+              "vendor_name": "Bramble Roast Coffee",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Ethiopia Guji 250g",
+                  "amount": 19.0
+                },
+                {
+                  "description": "Colombia Huila 1kg",
+                  "amount": 26.5
+                },
+                {
+                  "description": "Shipping",
+                  "amount": 3.95
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": 49.45,
+              "calculated_total": 49.45,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "paid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": null,
+          "document_id": "BR-99118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "Bramble Roast Coffee",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Ethiopia Guji 250g",
+              "amount": 19.0
+            },
+            {
+              "description": "Colombia Huila 1kg",
+              "amount": 26.5
+            },
+            {
+              "description": "Shipping",
+              "amount": 3.95
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": 49.45,
+          "calculated_total": 49.45,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        },
+        "stopped_unfixable": false
+      },
+      "scan-05": {
+        "id": "scan-05",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "MF-7102",
+              "issue_date": "2025-04-09",
+              "vendor_name": "Meridian Fasteners",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "M8 hex bolt zinc x500",
+                  "amount": 125.0
+                },
+                {
+                  "description": "Nyloc nut M8 x500",
+                  "amount": 62.5
+                },
+                {
+                  "description": "Washer form A M8 x500",
+                  "amount": 21.0
+                }
+              ],
+              "subtotal": 208.5,
+              "tax_amount": 41.7,
+              "stated_total": 250.2,
+              "calculated_total": 250.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "MF-7102",
+          "issue_date": "2025-04-09",
+          "vendor_name": "Meridian Fasteners",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "M8 hex bolt zinc x500",
+              "amount": 125.0
+            },
+            {
+              "description": "Nyloc nut M8 x500",
+              "amount": 62.5
+            },
+            {
+              "description": "Washer form A M8 x500",
+              "amount": 21.0
+            }
+          ],
+          "subtotal": 208.5,
+          "tax_amount": 41.7,
+          "stated_total": 250.2,
+          "calculated_total": 250.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "oth-06": {
+        "id": "oth-06",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "other",
+              "document_type_detail": "delivery note",
+              "document_id": "DN-55120",
+              "issue_date": "2025-01-22",
+              "vendor_name": "Ashby Logistics",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "unclear",
+              "line_items": [
+                {
+                  "description": "pallet, malt (25kg sacks x40)",
+                  "amount": null
+                },
+                {
+                  "description": "pallet, hops (vacuum packed)",
+                  "amount": null
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": null,
+              "calculated_total": null,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "delivery note",
+          "document_id": "DN-55120",
+          "issue_date": "2025-01-22",
+          "vendor_name": "Ashby Logistics",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "unclear",
+          "line_items": [
+            {
+              "description": "pallet, malt (25kg sacks x40)",
+              "amount": null
+            },
+            {
+              "description": "pallet, hops (vacuum packed)",
+              "amount": null
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": null,
+          "calculated_total": null,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      },
+      "cn-07": {
+        "id": "cn-07",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "credit_note",
+              "document_type_detail": null,
+              "document_id": "CN-2025-018",
+              "issue_date": "2025-02-02",
+              "vendor_name": "Vale Packaging Ltd",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Return: 3 x carton 300x200x150 @ 4.20",
+                  "amount": -12.6
+                },
+                {
+                  "description": "Return: 1 x tape roll (damaged)",
+                  "amount": -3.1
+                },
+                {
+                  "description": "Restocking fee",
+                  "amount": 2.0
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": -13.7,
+              "calculated_total": -13.7,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "credit_note",
+          "document_type_detail": null,
+          "document_id": "CN-2025-018",
+          "issue_date": "2025-02-02",
+          "vendor_name": "Vale Packaging Ltd",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Return: 3 x carton 300x200x150 @ 4.20",
+              "amount": -12.6
+            },
+            {
+              "description": "Return: 1 x tape roll (damaged)",
+              "amount": -3.1
+            },
+            {
+              "description": "Restocking fee",
+              "amount": 2.0
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": -13.7,
+          "calculated_total": -13.7,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      },
+      "inv-08": {
+        "id": "inv-08",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "invoice",
+              "document_type_detail": null,
+              "document_id": "SL-0291",
+              "issue_date": "2025-05-20",
+              "vendor_name": "Studio Lindqvist AB",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "EUR",
+              "line_items": [
+                {
+                  "description": "Concept development, 12 h",
+                  "amount": 960.0
+                },
+                {
+                  "description": "Revision round",
+                  "amount": 180.0
+                }
+              ],
+              "subtotal": 1140.0,
+              "tax_amount": null,
+              "stated_total": 1140.0,
+              "calculated_total": 1140.0,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unpaid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "invoice",
+          "document_type_detail": null,
+          "document_id": "SL-0291",
+          "issue_date": "2025-05-20",
+          "vendor_name": "Studio Lindqvist AB",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "EUR",
+          "line_items": [
+            {
+              "description": "Concept development, 12 h",
+              "amount": 960.0
+            },
+            {
+              "description": "Revision round",
+              "amount": 180.0
+            }
+          ],
+          "subtotal": 1140.0,
+          "tax_amount": null,
+          "stated_total": 1140.0,
+          "calculated_total": 1140.0,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unpaid"
+        },
+        "stopped_unfixable": false
+      },
+      "rcp-09": {
+        "id": "rcp-09",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "receipt",
+              "document_type_detail": null,
+              "document_id": "0074-118",
+              "issue_date": "2024-12-03",
+              "vendor_name": "The Old Forge Cafe",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "Flat white",
+                  "amount": 3.4
+                },
+                {
+                  "description": "Sourdough toast",
+                  "amount": 5.2
+                },
+                {
+                  "description": "Jam (extra)",
+                  "amount": 0.6
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": 9.2,
+              "calculated_total": 9.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "paid"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "receipt",
+          "document_type_detail": null,
+          "document_id": "0074-118",
+          "issue_date": "2024-12-03",
+          "vendor_name": "The Old Forge Cafe",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "Flat white",
+              "amount": 3.4
+            },
+            {
+              "description": "Sourdough toast",
+              "amount": 5.2
+            },
+            {
+              "description": "Jam (extra)",
+              "amount": 0.6
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": 9.2,
+          "calculated_total": 9.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "paid"
+        },
+        "stopped_unfixable": false
+      },
+      "oth-10": {
+        "id": "oth-10",
+        "attempts": [
+          {
+            "attempt": 0,
+            "record": {
+              "document_type": "other",
+              "document_type_detail": "bank statement extract",
+              "document_id": "20-44-19 / 30119827",
+              "issue_date": "2025-04-30",
+              "vendor_name": "Calder Bank",
+              "vendor_tax_id": null,
+              "po_number": null,
+              "currency": "GBP",
+              "line_items": [
+                {
+                  "description": "CARD PAYMENT NORTHGATE SUPPLIES",
+                  "amount": -538.8
+                },
+                {
+                  "description": "TRANSFER IN DENTON RAIL GROUP",
+                  "amount": 2484.0
+                }
+              ],
+              "subtotal": null,
+              "tax_amount": null,
+              "stated_total": null,
+              "calculated_total": 1945.2,
+              "conflict_detected": false,
+              "conflict_note": null,
+              "payment_status": "unclear"
+            },
+            "findings": []
+          }
+        ],
+        "record": {
+          "document_type": "other",
+          "document_type_detail": "bank statement extract",
+          "document_id": "20-44-19 / 30119827",
+          "issue_date": "2025-04-30",
+          "vendor_name": "Calder Bank",
+          "vendor_tax_id": null,
+          "po_number": null,
+          "currency": "GBP",
+          "line_items": [
+            {
+              "description": "CARD PAYMENT NORTHGATE SUPPLIES",
+              "amount": -538.8
+            },
+            {
+              "description": "TRANSFER IN DENTON RAIL GROUP",
+              "amount": 2484.0
+            }
+          ],
+          "subtotal": null,
+          "tax_amount": null,
+          "stated_total": null,
+          "calculated_total": 1945.2,
+          "conflict_detected": false,
+          "conflict_note": null,
+          "payment_status": "unclear"
+        },
+        "stopped_unfixable": false
+      }
+    },
+    "score_first_pass": {
+      "per_doc": {
+        "inv-01": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "NG-4471",
+              "want": "NG-4471"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-14",
+              "want": "2025-01-14"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Northgate Supplies Ltd",
+              "want": "Northgate Supplies Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": "GB 418 2290 11",
+              "want": "GB 418 2290 11"
+            },
+            "po_number": {
+              "ok": true,
+              "got": "PO-88213",
+              "want": "PO-88213"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 538.8,
+              "want": 538.8
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-02": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BF/2024/0912",
+              "want": "BF/2024/0912"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-31",
+              "want": "2024-12-31"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Blueforge Metals",
+              "want": "Blueforge Metals"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 230.5,
+              "want": 230.5
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-03": {
+          "covered_by_example": false,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "INV-2025-0033",
+              "want": "INV-2025-0033"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-03-05",
+              "want": "2025-03-05"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Harlow & Finch Consulting",
+              "want": "Harlow & Finch Consulting"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": "4409-DRG",
+              "want": "4409-DRG"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 2484.0,
+              "want": 2484.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": false,
+              "got": false,
+              "want": true
+            }
+          }
+        },
+        "rcp-04": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BR-99118",
+              "want": "BR-99118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Bramble Roast Coffee",
+              "want": "Bramble Roast Coffee"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 49.45,
+              "want": 49.45
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "scan-05": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "MF-7102",
+              "want": "MF-7102"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-04-09",
+              "want": "2025-04-09"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Meridian Fasteners",
+              "want": "Meridian Fasteners"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 250.2,
+              "want": 250.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-06": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "DN-55120",
+              "want": "DN-55120"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-22",
+              "want": "2025-01-22"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Ashby Logistics",
+              "want": "Ashby Logistics"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "cn-07": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "credit_note",
+              "want": "credit_note"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "CN-2025-018",
+              "want": "CN-2025-018"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-02-02",
+              "want": "2025-02-02"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Vale Packaging Ltd",
+              "want": "Vale Packaging Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": -13.7,
+              "want": -13.7
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-08": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "SL-0291",
+              "want": "SL-0291"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-05-20",
+              "want": "2025-05-20"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Studio Lindqvist AB",
+              "want": "Studio Lindqvist AB"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "EUR",
+              "want": "EUR"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 1140.0,
+              "want": 1140.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "rcp-09": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "0074-118",
+              "want": "0074-118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "The Old Forge Cafe",
+              "want": "The Old Forge Cafe"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 9.2,
+              "want": 9.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-10": {
+          "covered_by_example": false,
+          "correct": 9,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": false,
+              "got": "20-44-19 / 30119827",
+              "want": null
+            },
+            "issue_date": {
+              "ok": false,
+              "got": "2025-04-30",
+              "want": null
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Calder Bank",
+              "want": "Calder Bank"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        }
+      },
+      "overall": {
+        "correct": 107,
+        "of": 110,
+        "pct": 97.3
+      },
+      "layouts_an_example_covers": {
+        "correct": 33,
+        "of": 33,
+        "pct": 100.0
+      },
+      "layouts_no_example_covers": {
+        "correct": 74,
+        "of": 77,
+        "pct": 96.1
+      }
+    },
+    "score_final": {
+      "per_doc": {
+        "inv-01": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "NG-4471",
+              "want": "NG-4471"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-14",
+              "want": "2025-01-14"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Northgate Supplies Ltd",
+              "want": "Northgate Supplies Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": "GB 418 2290 11",
+              "want": "GB 418 2290 11"
+            },
+            "po_number": {
+              "ok": true,
+              "got": "PO-88213",
+              "want": "PO-88213"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 538.8,
+              "want": 538.8
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-02": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BF/2024/0912",
+              "want": "BF/2024/0912"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-31",
+              "want": "2024-12-31"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Blueforge Metals",
+              "want": "Blueforge Metals"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 230.5,
+              "want": 230.5
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-03": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "INV-2025-0033",
+              "want": "INV-2025-0033"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-03-05",
+              "want": "2025-03-05"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Harlow & Finch Consulting",
+              "want": "Harlow & Finch Consulting"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": "4409-DRG",
+              "want": "4409-DRG"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 2484.0,
+              "want": 2484.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": true,
+              "want": true
+            }
+          }
+        },
+        "rcp-04": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BR-99118",
+              "want": "BR-99118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Bramble Roast Coffee",
+              "want": "Bramble Roast Coffee"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 49.45,
+              "want": 49.45
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "scan-05": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "MF-7102",
+              "want": "MF-7102"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-04-09",
+              "want": "2025-04-09"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Meridian Fasteners",
+              "want": "Meridian Fasteners"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 250.2,
+              "want": 250.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-06": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "DN-55120",
+              "want": "DN-55120"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-22",
+              "want": "2025-01-22"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Ashby Logistics",
+              "want": "Ashby Logistics"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "cn-07": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "credit_note",
+              "want": "credit_note"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "CN-2025-018",
+              "want": "CN-2025-018"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-02-02",
+              "want": "2025-02-02"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Vale Packaging Ltd",
+              "want": "Vale Packaging Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": -13.7,
+              "want": -13.7
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-08": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "SL-0291",
+              "want": "SL-0291"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-05-20",
+              "want": "2025-05-20"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Studio Lindqvist AB",
+              "want": "Studio Lindqvist AB"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "EUR",
+              "want": "EUR"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 1140.0,
+              "want": 1140.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "rcp-09": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "0074-118",
+              "want": "0074-118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "The Old Forge Cafe",
+              "want": "The Old Forge Cafe"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 9.2,
+              "want": 9.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-10": {
+          "covered_by_example": false,
+          "correct": 9,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": false,
+              "got": "20-44-19 / 30119827",
+              "want": null
+            },
+            "issue_date": {
+              "ok": false,
+              "got": "2025-04-30",
+              "want": null
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Calder Bank",
+              "want": "Calder Bank"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        }
+      },
+      "overall": {
+        "correct": 108,
+        "of": 110,
+        "pct": 98.2
+      },
+      "layouts_an_example_covers": {
+        "correct": 33,
+        "of": 33,
+        "pct": 100.0
+      },
+      "layouts_no_example_covers": {
+        "correct": 75,
+        "of": 77,
+        "pct": 97.4
+      }
+    },
+    "detected_patterns": {
+      "calculated_total_wrong": 1,
+      "unflagged_total_mismatch": 1
+    },
+    "retries_used": 1,
+    "unresolved_after_retry": {}
+  },
+  "stage5_unfixable": {
+    "strict_schema_po": "null",
+    "strict_schema_invented": true,
+    "attempts": [
+      {
+        "attempt": 0,
+        "po_number": null,
+        "is_a_real_reference": false
+      },
+      {
+        "attempt": 1,
+        "po_number": null,
+        "is_a_real_reference": false
+      }
+    ],
+    "stopped_without_accepting_invention": true,
+    "conclusion": "The value is not on the page. The fix is the validator rule (and a nullable schema), not another retry: retrying a genuinely absent field only buys a more confident invention."
+  },
+  "stage6_batch": {
+    "batch_id": "msgbatch_01YBBZM7mAVupL5sfUxvCynA",
+    "seconds": 185.6,
+    "succeeded": 10,
+    "failed": [],
+    "score": {
+      "per_doc": {
+        "inv-01": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "NG-4471",
+              "want": "NG-4471"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-14",
+              "want": "2025-01-14"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Northgate Supplies Ltd",
+              "want": "Northgate Supplies Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": "GB 418 2290 11",
+              "want": "GB 418 2290 11"
+            },
+            "po_number": {
+              "ok": true,
+              "got": "PO-88213",
+              "want": "PO-88213"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 538.8,
+              "want": 538.8
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-02": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BF/2024/0912",
+              "want": "BF/2024/0912"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-31",
+              "want": "2024-12-31"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Blueforge Metals",
+              "want": "Blueforge Metals"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 230.5,
+              "want": 230.5
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-03": {
+          "covered_by_example": false,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "INV-2025-0033",
+              "want": "INV-2025-0033"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-03-05",
+              "want": "2025-03-05"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Harlow & Finch Consulting",
+              "want": "Harlow & Finch Consulting"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": "4409-DRG",
+              "want": "4409-DRG"
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 2484.0,
+              "want": 2484.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": false,
+              "got": false,
+              "want": true
+            }
+          }
+        },
+        "rcp-04": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "BR-99118",
+              "want": "BR-99118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Bramble Roast Coffee",
+              "want": "Bramble Roast Coffee"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 49.45,
+              "want": 49.45
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "scan-05": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "MF-7102",
+              "want": "MF-7102"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-04-09",
+              "want": "2025-04-09"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Meridian Fasteners",
+              "want": "Meridian Fasteners"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 250.2,
+              "want": 250.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-06": {
+          "covered_by_example": true,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "DN-55120",
+              "want": "DN-55120"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-01-22",
+              "want": "2025-01-22"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Ashby Logistics",
+              "want": "Ashby Logistics"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "cn-07": {
+          "covered_by_example": false,
+          "correct": 10,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "credit_note",
+              "want": "credit_note"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "CN-2025-018",
+              "want": "CN-2025-018"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-02-02",
+              "want": "2025-02-02"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Vale Packaging Ltd",
+              "want": "Vale Packaging Ltd"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": -13.7,
+              "want": -13.7
+            },
+            "payment_status": {
+              "ok": false,
+              "got": "unpaid",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "inv-08": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "invoice",
+              "want": "invoice"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "SL-0291",
+              "want": "SL-0291"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2025-05-20",
+              "want": "2025-05-20"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Studio Lindqvist AB",
+              "want": "Studio Lindqvist AB"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "EUR",
+              "want": "EUR"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 1140.0,
+              "want": 1140.0
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unpaid",
+              "want": "unpaid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "rcp-09": {
+          "covered_by_example": false,
+          "correct": 11,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "receipt",
+              "want": "receipt"
+            },
+            "document_id": {
+              "ok": true,
+              "got": "0074-118",
+              "want": "0074-118"
+            },
+            "issue_date": {
+              "ok": true,
+              "got": "2024-12-03",
+              "want": "2024-12-03"
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "The Old Forge Cafe",
+              "want": "The Old Forge Cafe"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 3,
+              "want": 3
+            },
+            "stated_total": {
+              "ok": true,
+              "got": 9.2,
+              "want": 9.2
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "paid",
+              "want": "paid"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        },
+        "oth-10": {
+          "covered_by_example": false,
+          "correct": 9,
+          "of": 11,
+          "fields": {
+            "document_type": {
+              "ok": true,
+              "got": "other",
+              "want": "other"
+            },
+            "document_id": {
+              "ok": false,
+              "got": "20-44-19",
+              "want": null
+            },
+            "issue_date": {
+              "ok": false,
+              "got": "2025-04-30",
+              "want": null
+            },
+            "vendor_name": {
+              "ok": true,
+              "got": "Calder Bank",
+              "want": "Calder Bank"
+            },
+            "vendor_tax_id": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "po_number": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "currency": {
+              "ok": true,
+              "got": "GBP",
+              "want": "GBP"
+            },
+            "line_item_count": {
+              "ok": true,
+              "got": 2,
+              "want": 2
+            },
+            "stated_total": {
+              "ok": true,
+              "got": null,
+              "want": null
+            },
+            "payment_status": {
+              "ok": true,
+              "got": "unclear",
+              "want": "unclear"
+            },
+            "conflict_detected": {
+              "ok": true,
+              "got": false,
+              "want": false
+            }
+          }
+        }
+      },
+      "overall": {
+        "correct": 106,
+        "of": 110,
+        "pct": 96.4
+      },
+      "layouts_an_example_covers": {
+        "correct": 33,
+        "of": 33,
+        "pct": 100.0
+      },
+      "layouts_no_example_covers": {
+        "correct": 73,
+        "of": 77,
+        "pct": 94.8
+      }
+    },
+    "resubmit_only": []
+  },
+  "checks": [
+    {
+      "check": "1. Forced tool_use returns a parseable record every time",
+      "pass": true,
+      "detail": "20/20 forced extractions produced a tool_use block; prose asked for JSON parsed strictly 0/10 and conformed to the shape 10/10"
+    },
+    {
+      "check": "2. A document that disagrees with itself is flagged, not corrected",
+      "pass": true,
+      "detail": "inv-03 stated_total=2484.0 calculated_total=2424.0 conflict_detected=True note='Stated total 2484.00 does not equal calculated total 2424.00 (line items 2020.00 plus tax 404.00).'"
+    },
+    {
+      "check": "3. A printed but empty box extracts as null, not a placeholder",
+      "pass": true,
+      "detail": "scan-05 po_number=None under the nullable schema"
+    },
+    {
+      "check": "4. The same box under a required non-nullable field forces invention",
+      "pass": true,
+      "detail": "strict schema returned po_number='null' (type str) for the same blank box"
+    },
+    {
+      "check": "5. A retry on a genuinely absent field stops instead of inventing",
+      "pass": true,
+      "detail": "attempts returned [None, None]; none is a real reference, so the pipeline stopped and named the rule and schema as the fix"
+    },
+    {
+      "check": "6. Unenumerated document kinds land on other + freeform detail",
+      "pass": true,
+      "detail": "oth-06=other/'delivery note', oth-10=other/'bank statement extract'"
+    },
+    {
+      "check": "7. Few-shot examples do not lose accuracy against zero-shot",
+      "pass": true,
+      "detail": "zero-shot 97.3% -> few-shot 98.2% of 110 scored fields"
+    },
+    {
+      "check": "8. The validation-retry loop resolves errors it can resolve",
+      "pass": true,
+      "detail": "few-shot first-pass findings on 1 documents; still failing after retry: none"
+    }
+  ]
+}
