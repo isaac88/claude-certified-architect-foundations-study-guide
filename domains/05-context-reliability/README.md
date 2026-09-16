@@ -1,4 +1,4 @@
-# Domain 5 — Context Management & Reliability (15%)
+# 🧠 Domain 5 — Context Management & Reliability (15%)
 
 Smallest weight. If you get this wrong, Domain 1 coordinators drop IDs, Domain 2 errors look like empty success, and Domain 4 “97% accurate” pipelines ship garbage on one document type.
 

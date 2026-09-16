@@ -1,4 +1,4 @@
-# Domain 3 — Claude Code Configuration & Workflows (20%)
+# 💻 Domain 3 — Claude Code Configuration & Workflows (20%)
 
 This domain is configuration. You either know **where the file goes** and **what the flag does**, or you guess. Reasoning will not invent `.claude/commands/`. Hands-on in exercise 2 is not optional.
 

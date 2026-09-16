@@ -1,4 +1,4 @@
-# Decision rules (memorise)
+# 📏 Decision rules (memorise)
 
 Print this. If you can apply every row under time pressure, Domain 1 is largely done and the other domains follow the same logic.
 

@@ -1,4 +1,4 @@
-# Domain 1 — Agentic Architecture & Orchestration (27%)
+# 🤖 Domain 1 — Agentic Architecture & Orchestration (27%)
 
 The heaviest domain. Single-agent loops through to coordinator–subagent systems, hooks, decomposition, and session state.
 

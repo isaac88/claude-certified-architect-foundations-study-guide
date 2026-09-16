@@ -1,4 +1,4 @@
-# Domain 4 — Prompt Engineering & Structured Output (20%)
+# ✍️ Domain 4 — Prompt Engineering & Structured Output (20%)
 
 This is where distractors sound like good engineering. “Be conservative”, “output as JSON”, “batch everything for 50% savings”, “review your own code in the same session” all sound reasonable. They are wrong for the problem in the stem.
 
