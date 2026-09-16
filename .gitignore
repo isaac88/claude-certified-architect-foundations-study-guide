@@ -26,6 +26,7 @@ build/
 
 # Private working files — local only, never published
 HANDOFF.md
+progress/weak-spots.md
 
 # Personal score dumps
 progress/private/
