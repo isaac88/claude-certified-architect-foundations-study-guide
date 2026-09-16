@@ -31,7 +31,9 @@ If Domain 1 is weak, you do not pass. Start there.
 
 ## How to use this repo
 
-**Start here: [docs/roadmap.md](docs/roadmap.md)** — the execution order, pairing each Anthropic Academy course section with the domain files it feeds.
+**New here? Start with [docs/getting-started.md](docs/getting-started.md)** — how to fork the repo, blank the tracker, replicate the study method, and set up the tooling.
+
+Then follow **[docs/roadmap.md](docs/roadmap.md)** — the execution order, pairing each Anthropic Academy course section with the domain files it feeds.
 
 [docs/study-steps.md](docs/study-steps.md) holds the numbered 1–30 plan that [progress.md](progress.md) ticks; the roadmap says what to do on which day.
 
@@ -48,7 +50,7 @@ See [docs/study-plan.md](docs/study-plan.md) for a 4-week and a 2-week path.
 
 Free Anthropic Academy courses (Skilljar) — listed under “Prepare for this exam”. See [docs/academy-courses.md](docs/academy-courses.md) and tick A–G in [progress.md](progress.md).
 
-Code written along with course C lives in [academy/course-c-claude-api](academy/course-c-claude-api/) — runnable exercises with a study header on each, indexed in that folder's README.
+Code written along with course C lives in [academy/course-c-claude-api](academy/course-c-claude-api/) — runnable exercises with a study header on each, indexed in that folder's README. Its `.env.example` lists every environment variable the repo needs.
 
 Tooling is pinned in [mise.toml](mise.toml) — Python 3.12 and the Anthropic `ant` CLI. Run `mise install github:anthropics/anthropic-cli` if the CLI is missing (note: mise's registry shortname `ant` is Apache Ant, not this).
 
