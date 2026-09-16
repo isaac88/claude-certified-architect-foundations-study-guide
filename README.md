@@ -50,7 +50,7 @@ See [docs/study-plan.md](docs/study-plan.md) for a 4-week and a 2-week path.
 
 Free Anthropic Academy courses (Skilljar) — listed under “Prepare for this exam”. See [docs/academy-courses.md](docs/academy-courses.md) and tick A–G in [progress.md](progress.md).
 
-Code written along with course C lives in [academy/course-c-claude-api](academy/course-c-claude-api/) — runnable exercises with a study header on each, indexed in that folder's README. Its `.env.example` lists every environment variable the repo needs.
+Code written along with course C lives in [academy/course-c-claude-api](academy/course-c-claude-api/) — runnable exercises with a study header on each, indexed in that folder's README. Every environment variable the repo needs is listed in the Setup section of [docs/getting-started.md](docs/getting-started.md).
 
 Tooling is pinned in [mise.toml](mise.toml) — Python 3.12 and the Anthropic `ant` CLI. Run `mise install github:anthropics/anthropic-cli` if the CLI is missing (note: mise's registry shortname `ant` is Apache Ant, not this).
 
