@@ -31,3 +31,28 @@ Bedrock and Google Cloud teach the same architectural ideas as the API course on
 | Cloud deployment at work | D **or** E, not both by default |
 
 A and B first only if Claude is new. If you already use Claude at work, start at **C**.
+
+## Unofficial practice — not a source of truth
+
+Neither site below is affiliated with Anthropic. Both are **derived from the same public
+material this repo is derived from**: official documentation, the Skilljar courses and the
+published exam guide. That makes them peers of these notes, never authorities over them.
+
+| Site | What it offers | Affiliation |
+|---|---|---|
+| [claudecertificationguide.com](https://claudecertificationguide.com/) | Free, no sign-up: lessons over the five domains, 250+ questions, and a full **60-question / 120-minute mock** | States plainly: *"an independent community resource… not affiliated with, endorsed by, or sponsored by Anthropic"* |
+| [certificationpractice.com](https://certificationpractice.com/practice-exams/anthropic-claude-certified-architect-foundations) | Practice tests for this exam | Unaffiliated third party; terms not inspected (the site rate-limited the check) |
+
+**The rule when one of them disagrees with these notes:** nothing is settled. Two secondary
+sources are disagreeing, and the tiebreak is the vendor documentation or the Academy course
+— never the one with the more confident formatting. Log the disagreement in your ledger
+instead of absorbing it; an answer key you accept without checking becomes a memorised
+error, which does not feel like a gap, it feels like knowledge.
+
+**What they are genuinely good for:** pacing and stamina. Sixty scenario items in 120
+minutes is a physical exercise as much as a knowledge one, and the first time you feel that
+should not be on exam day. Use the timed mock as a rehearsal.
+
+**What they do not replace:** step 29, the **official Anthropic Academy practice exam**,
+which sits behind your Academy login on the certification page under "Prepare for this
+exam". The real exam is delivered by [Pearson VUE](https://www.pearsonvue.com/us/en/anthropic.html#contact).
