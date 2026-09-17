@@ -32,6 +32,9 @@ progress/weak-spots.md
 progress/private/
 *.local.md
 
+# Mock-exam exports (third-party question text — keep local, never publish)
+practice/mocks-exam/
+
 # Official / third-party PDFs — keep local, do not publish
 *.pdf
 
