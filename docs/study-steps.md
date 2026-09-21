@@ -70,7 +70,7 @@ Same rhythm: one file, check questions, next file.
 26. Finish exercise 4 if you skipped it in phase 2.
 27. Recite `cheatsheets/decision-rules.md` from memory; mark gaps against `cheatsheets/anti-patterns.md`.
 28. Sit `practice/mixed-set.md` (target **10/12**).
-29. Sit the official Anthropic Academy practice exam.
+29. Sit a second full-length timed mock from a different third-party source. (Corrected 21 Sep 2026: no official Anthropic practice exam exists — see [academy-courses.md](academy-courses.md).)
 30. Re-read **only** the task files you missed. No new topics.
 
 ---
