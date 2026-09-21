@@ -53,6 +53,13 @@ error, which does not feel like a gap, it feels like knowledge.
 minutes is a physical exercise as much as a knowledge one, and the first time you feel that
 should not be on exam day. Use the timed mock as a rehearsal.
 
-**What they do not replace:** step 29, the **official Anthropic Academy practice exam**,
-which sits behind your Academy login on the certification page under "Prepare for this
-exam". The real exam is delivered by [Pearson VUE](https://www.pearsonvue.com/us/en/anthropic.html#contact).
+**Correction (21 Sep 2026):** an earlier version of this section claimed an **official
+Anthropic Academy practice exam** sits behind the Academy login under "Prepare for this
+exam". **It does not exist.** That section lists preparation courses only, and every
+practice exam on the market for CCA-F — the two sites above, the Udemy sets, all of them —
+is third-party. The claim was caught by checking the actual Academy page against the note:
+the exact "memorised error" failure this file warns about, this time in the notes
+themselves. The only official assessment is the real exam, delivered by
+[Pearson VUE](https://www.pearsonvue.com/us/en/anthropic.html#contact). Step 29 is
+accordingly a **second full-length timed mock from a different third-party source**, with
+every disputed key checked against the vendor docs.
