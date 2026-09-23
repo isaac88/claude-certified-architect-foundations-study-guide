@@ -22,7 +22,7 @@ These builds match the public preparation guidance. You do not need to commit co
 1. Project-level `.claude/CLAUDE.md` (team standards) **and** a directory-level `CLAUDE.md` in one package. Keep personal notes only in `~/.claude/CLAUDE.md` so you can see the 3.1 trap.
 2. `.claude/rules/` with glob `paths` for **test files** and **API files** (not one always-on blob).
 3. Project slash command `/review` in `.claude/commands/`.
-4. A skill with `context: fork` and `allowed-tools` (read-only if it is exploratory). Optional: a **personal** skill in `~/.claude/skills/` with a different name.
+4. A skill with `context: fork` (its instructions must stand alone — the forked subagent has no conversation history) and `allowed-tools` to pre-approve the tools it uses each turn; if it must never edit, add `disallowed-tools` or a deny rule in settings. Optional: a **personal** skill in `~/.claude/skills/` with a different name.
 5. CI script: `claude -p` with `--output-format json` (and `--json-schema` if you have a schema). Prove that omitting `-p` is what hangs a job.
 6. One MCP server in `.mcp.json` using `${ENV_VAR}` (from Domain 2).
 
