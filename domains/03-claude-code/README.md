@@ -7,7 +7,7 @@ Same rhythm as Domains 1–2: one file, check questions, next file. Finish with 
 | Task | File | You must know |
 |---|---|---|
 | 3.1 | [3.1-claude-md.md](3.1-claude-md.md) | User vs project vs directory; `/memory`; `@import` |
-| 3.2 | [3.2-commands-and-skills.md](3.2-commands-and-skills.md) | Commands vs skills; `context: fork`; personal vs team paths |
+| 3.2 | [3.2-commands-and-skills.md](3.2-commands-and-skills.md) | Commands vs skills; `context: fork` vs fork subagent vs `git worktree`; `allowed-tools` (grant) vs deny rule (guarantee); personal vs team paths |
 | 3.3 | [3.3-path-specific-rules.md](3.3-path-specific-rules.md) | `.claude/rules/` globs vs directory CLAUDE.md |
 | 3.4 | [3.4-plan-mode.md](3.4-plan-mode.md) | Plan vs direct vs Explore vs hybrid |
 | 3.5 | [3.5-iterative-refinement.md](3.5-iterative-refinement.md) | Examples > prose; TDD; batch vs sequence |

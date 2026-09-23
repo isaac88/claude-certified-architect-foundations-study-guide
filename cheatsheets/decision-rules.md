@@ -59,7 +59,10 @@ Print this. If you can apply every row under time pressure, Domain 1 is largely 
 | Personal command / skill | `~/.claude/commands/` or `~/.claude/skills/` (different name) |
 | Always-on vs on-demand | CLAUDE.md/rules vs commands/skills |
 | Conventions by file type across many folders | `.claude/rules/` with glob `paths` |
-| Isolate noisy exploration | Skill with `context: fork` + `allowed-tools` |
+| Isolate noisy exploration that needs nothing from the chat | Skill with `context: fork` (fresh subagent, no conversation history; `allowed-tools` only pre-approves its tools for the turn) |
+| Skill must know what was said this session, output kept out of the main window | Fork **subagent** (copy of the conversation), not `context: fork` |
+| Several agents editing files at once | `git worktree` (`--worktree`, `isolation: worktree`) — a fork isolates context, not files |
+| Guarantee a skill never runs a tool | `settings.json` **deny** rule or a `PreToolUse` hook; `allowed-tools` is a grant, `disallowed-tools` lasts one turn |
 | Claude interprets a transform differently each run | 2–3 input/output examples first |
 | Interacting fixes | One message; independent fixes may be sequential |
 | Multi-file architecture | Plan mode; then direct to implement |

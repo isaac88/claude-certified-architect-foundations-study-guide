@@ -30,7 +30,9 @@ The exam picks **4 of these 6** at random. Learn the decision points, not the st
 |---|---|---|
 | Team standards | Project `.claude/CLAUDE.md` (version-controlled) | `~/.claude/CLAUDE.md` (personal only) |
 | Plan vs execute | Plan mode for multi-file architecture; direct execution for well-scoped edits | Always plan, or never plan |
-| Isolation | Skills with `context: fork` and `allowed-tools` | Slash commands that dump exploration into the main session |
+| Isolation of noisy work | Skill with `context: fork` (fresh subagent, no conversation history; `allowed-tools` only pre-approves its tools) | Slash commands that dump exploration into the main session; reading `allowed-tools` as a restriction |
+| Parallel file edits | One `git worktree` per session or agent | `context: fork` — it isolates context, not the file system |
+| Guarantee a tool is never called | `settings.json` deny rule or `PreToolUse` hook | `allowed-tools` that omits the tool |
 | Refinement | TDD: failing test → implement → keep tests green | “Make it better” with no verification criteria |
 | Team commands | `.claude/commands/` in the repo | `~/.claude/commands/` |
 
